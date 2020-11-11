@@ -1,0 +1,47 @@
+{
+	"name": "professional-wiki/wikibase-edtf",
+	"type": "mediawiki-extension",
+	"description": "Adds the EDTF data type to Wikibase",
+	"keywords": [
+		"MediaWiki",
+		"Wikibase",
+		"EDTF",
+		"datatype",
+		"Extended Date Time Format",
+		"datetime",
+		"standard",
+		"time interval",
+		"uncertainty",
+		"seasons",
+		"extension",
+		"wiki",
+		"structured data",
+		"semantic web",
+		"wikidata"
+	],
+	"homepage": "https://github.com/ProfessionalWiki/WikibaseEdtf",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Professional.Wiki",
+			"email": "info@professional.wiki",
+			"homepage": "https://Professional.Wiki",
+			"role": "Creator"
+		},
+		{
+			"name": "Jeroen De Dauw",
+			"email": "jeroendedauw@gmail.com",
+			"homepage": "https://www.EntropyWins.wtf/mediawiki",
+			"role": "Creator and developer"
+		}
+	],
+	"support": {
+		"source": "https://github.com/ProfessionalWiki/WikibaseEdtf/issues"
+	},
+	"require": {
+		"php": ">=7.4",
+		"composer/installers": "^1.0.1"
+	},
+	"require-dev": {
+	}
+}

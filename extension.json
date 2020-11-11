@@ -1,0 +1,53 @@
+{
+	"name": "Wikibase EDTF",
+	"type": "wikibase",
+
+	"version": "1.0.0",
+
+	"author": [
+		"[https://www.EntropyWins.wtf/mediawiki Jeroen De Dauw]",
+		"[https://professional.wiki/ Professional.Wiki]"
+	],
+
+	"url": "https://github.com/ProfessionalWiki/WikibaseEdtf",
+
+	"descriptionmsg": "wbedtf-desc",
+
+	"requires": {
+		"MediaWiki": ">= 1.35.0",
+		"extensions": {
+			"WikibaseRepository": "*"
+		}
+	},
+
+	"MessagesDirs": {
+		"WikibaseEDTF": [
+			"i18n"
+		]
+	},
+
+	"AutoloadNamespaces": {
+		"Wikibase\\EDTF\\": "src/",
+		"Wikibase\\EDTF\\Tests\\": "tests/"
+	},
+
+	"callback": "Wikibase\\EDTF\\HookHandlers::onExtensionRegistration",
+
+	"Hooks": {
+		"WikibaseRepoDataTypes": "Wikibase\\EDTF\\HookHandlers::onWikibaseRepoDataTypes",
+		"WikibaseClientDataTypes": "Wikibase\\EDTF\\HookHandlers::onWikibaseClientDataTypes"
+	},
+
+	"config": {
+	},
+
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "WikibaseEdtf/resources"
+	},
+
+	"ResourceModules": {
+	},
+
+	"manifest_version": 2
+}
