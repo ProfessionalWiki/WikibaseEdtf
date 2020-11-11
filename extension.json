@@ -47,6 +47,17 @@
 	},
 
 	"ResourceModules": {
+		"jquery.valueview.experts.edtf": {
+			"scripts": [
+				"EDTF.expert.js"
+			],
+			"dependencies": [
+				"jquery.event.special.eachchange",
+				"jquery.valueview.experts.StringValue",
+				"jquery.valueview.Expert"
+			],
+			"targets": [ "desktop", "mobile" ]
+		}
 	},
 
 	"manifest_version": 2
