@@ -38,6 +38,18 @@ wfLoadExtension( 'WikibaseEdtf' );
 
 You can verify the extension was enabled successfully by opening your wikis Special:Version page in your browser.
 
+## Running the tests
+
+* PHP tests: `php tests/phpunit/phpunit.php extensions/WikibaseEdtf/tests/`
+
+## Release notes
+
+### Version 0.1.0
+
+Under development
+
+* Initial release for MediaWiki/Wikibase 1.35
+
 [Professional.Wiki]: https://professional.wiki
 [EDTF]: https://www.loc.gov/standards/datetime/
 [Wikibase]: https://wikibase.consulting/what-is-wikibase/
