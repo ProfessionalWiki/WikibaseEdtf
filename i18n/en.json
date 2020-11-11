@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jeroen De Dauw"
+		]
+	},
+	"wbedtf-name": "Wikibase EDTF",
+	"wbedtf-desc": "Adds support for the EDTF standard to Wikibase via a dedicated data type",
+
+	"datatypes-type-edtf": "EDTF Date/Time"
+}
