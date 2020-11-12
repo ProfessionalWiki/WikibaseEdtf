@@ -15,8 +15,7 @@ class EdtfFormatter implements ValueFormatter {
 			throw new InvalidArgumentException( 'Data value type mismatch. Expected a StringValue.' );
 		}
 
-
-
+		return $value->getValue();
 	}
 
 }
