@@ -5,8 +5,6 @@ declare( strict_types = 1 );
 namespace Wikibase\EDTF;
 
 use ValueFormatters\FormatterOptions;
-use ValueFormatters\FormattingException;
-use ValueFormatters\ValueFormatter;
 
 final class HookHandlers {
 
@@ -21,7 +19,10 @@ final class HookHandlers {
 			'validator-factory-callback' => function() {
 				// TODO
 			},
-			'formatter-factory-callback' => function( $format, FormatterOptions $options ) {
+			'parser-factory-callback' => function() {
+				return WikibaseEdtf::getGlobalInstance()->getEdtfParser();
+			},
+			'formatter-factory-callback' => function() {
 				return WikibaseEdtf::getGlobalInstance()->getEdtfFormatter();
 			},
 			'rdf-builder-factory-callback' => function () {
