@@ -4,7 +4,9 @@ declare( strict_types = 1 );
 
 namespace Wikibase\EDTF;
 
-class WikibaseEDTF {
+use Wikibase\EDTF\Services\EdtfFormatter;
+
+class WikibaseEdtf {
 
 	protected static /* ?self */ $instance;
 
@@ -21,6 +23,10 @@ class WikibaseEDTF {
 	}
 
 	protected final function __construct() {
+	}
+
+	public function getEdtfFormatter(): EdtfFormatter {
+		return new EdtfFormatter();
 	}
 
 }

@@ -22,11 +22,7 @@ final class HookHandlers {
 				// TODO
 			},
 			'formatter-factory-callback' => function( $format, FormatterOptions $options ) {
-				return new class() implements ValueFormatter {
-					public function format( $value ) {
-
-					}
-				};
+				return WikibaseEdtf::getGlobalInstance()->getEdtfFormatter();
 			},
 			'rdf-builder-factory-callback' => function () {
 				// TODO
