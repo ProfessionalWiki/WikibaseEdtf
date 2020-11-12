@@ -4,6 +4,7 @@ declare( strict_types = 1 );
 
 namespace Wikibase\EDTF;
 
+use EDTF\Parser;
 use Wikibase\EDTF\Services\EdtfFormatter;
 use Wikibase\EDTF\Services\EdtfParser;
 
@@ -31,7 +32,7 @@ class WikibaseEdtf {
 	}
 
 	public function getEdtfParser(): EdtfParser {
-		return new EdtfParser();
+		return new EdtfParser( new Parser() );
 	}
 
 }

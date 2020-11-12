@@ -4,6 +4,7 @@ declare( strict_types = 1 );
 
 namespace Wikibase\EDTF\Tests\Unit;
 
+use EDTF\Parser;
 use PHPUnit\Framework\TestCase;
 use Wikibase\EDTF\Services\EdtfParser;
 
@@ -22,7 +23,7 @@ class EdtfParserTest extends TestCase {
 	}
 
 	private function newParser(): EdtfParser {
-		return new EdtfParser();
+		return new EdtfParser( new Parser() );
 	}
 
 	public function testNonStringCausesInvalidArgumentException() {
