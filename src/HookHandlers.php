@@ -5,6 +5,8 @@ declare( strict_types = 1 );
 namespace Wikibase\EDTF;
 
 use ValueFormatters\FormatterOptions;
+use ValueFormatters\FormattingException;
+use ValueFormatters\ValueFormatter;
 
 final class HookHandlers {
 
@@ -17,16 +19,20 @@ final class HookHandlers {
 			'value-type' => 'string',
 			'expert-module' => 'jquery.valueview.experts.edtf',
 			'validator-factory-callback' => function() {
-
+				// TODO
 			},
 			'formatter-factory-callback' => function( $format, FormatterOptions $options ) {
+				return new class() implements ValueFormatter {
+					public function format( $value ) {
 
+					}
+				};
 			},
 			'rdf-builder-factory-callback' => function () {
-
+				// TODO
 			},
 			'rdf-data-type' => function() {
-
+				// TODO
 			},
 		];
 	}
@@ -35,7 +41,7 @@ final class HookHandlers {
 		$dataTypeDefinitions['PT:edtf'] = [
 			'value-type' => 'string',
 			'formatter-factory-callback' => function( $format, FormatterOptions $options ) {
-
+				// TODO
 			},
 		];
 	}
