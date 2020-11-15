@@ -37,7 +37,7 @@ final class HookHandlers {
 	public static function onWikibaseClientDataTypes( array &$dataTypeDefinitions ): void {
 		$dataTypeDefinitions['PT:edtf'] = [
 			'value-type' => 'string',
-			'formatter-factory-callback' => function( $format, FormatterOptions $options ) {
+			'formatter-factory-callback' => function() {
 				return WikibaseEdtf::getGlobalInstance()->getEdtfFormatter();
 			},
 		];
