@@ -17,7 +17,7 @@ final class HookHandlers {
 			'value-type' => 'string',
 			'expert-module' => 'jquery.valueview.experts.edtf',
 			'validator-factory-callback' => function() {
-				// TODO
+				return [ WikibaseEdtf::getGlobalInstance()->getEdtfValidator() ];
 			},
 			'parser-factory-callback' => function() {
 				return WikibaseEdtf::getGlobalInstance()->getEdtfParser();
