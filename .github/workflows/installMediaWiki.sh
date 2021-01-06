@@ -20,9 +20,11 @@ echo '$wgShowDBErrorBacktrace = true;' >> LocalSettings.php
 echo '$wgDevelopmentWarnings = true;' >> LocalSettings.php
 
 echo '$wgEnableWikibaseRepo = true;' >> LocalSettings.php
-echo '$wgEnableWikibaseClient = false;' >> LocalSettings.php
+echo '$wgEnableWikibaseClient = true;' >> LocalSettings.php
 echo 'require_once __DIR__ . "/extensions/Wikibase/repo/Wikibase.php";' >> LocalSettings.php
 echo 'require_once __DIR__ . "/extensions/Wikibase/repo/ExampleSettings.php";' >> LocalSettings.php
+echo 'require_once __DIR__ . "/extensions/Wikibase/client/WikibaseClient.php";' >> LocalSettings.php
+echo 'require_once __DIR__ . "/extensions/Wikibase/client/ExampleSettings.php";' >> LocalSettings.php
 
 echo 'wfLoadExtension( "'$EXTENSION_NAME'" );' >> LocalSettings.php
 
