@@ -4,6 +4,7 @@ declare( strict_types = 1 );
 
 namespace Wikibase\EDTF\Tests\Unit;
 
+use DataValues\StringValue;
 use PHPUnit\Framework\TestCase;
 use Wikibase\EDTF\Services\EdtfValidator;
 
@@ -16,7 +17,7 @@ class EdtfValidatorTest extends TestCase {
 
 	public function testHappyPath() {
 		$this->assertTrue(
-			$this->newValidator()->validate( self::VALID_DATE_AND_TIME )->isValid()
+			$this->newValidator()->validate( new StringValue( self::VALID_DATE_AND_TIME ) )->isValid()
 		);
 	}
 
