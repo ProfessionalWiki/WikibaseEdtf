@@ -28,7 +28,7 @@
 
 	"AutoloadNamespaces": {
 		"Wikibase\\EDTF\\": "src/",
-		"Wikibase\\EDTF\\Tests\\": "tests/"
+		"Wikibase\\EDTF\\Tests\\": "tests/php/"
 	},
 
 	"callback": "Wikibase\\EDTF\\HookHandlers::onExtensionRegistration",

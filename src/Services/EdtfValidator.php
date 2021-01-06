@@ -5,6 +5,7 @@ declare( strict_types = 1 );
 namespace Wikibase\EDTF\Services;
 
 use DataValues\StringValue;
+use EDTF\Parser;
 use ValueValidators\Error;
 use ValueValidators\Result;
 use ValueValidators\ValueValidator;
@@ -20,8 +21,12 @@ class EdtfValidator implements ValueValidator {
 	}
 
 	private function validateString( string $edtf ): Result {
-		if ( $edtf === 'bar' ) {
-			return $this->newErrorResult( 'EDTF cannot be bar' );
+		$parser = new Parser();
+
+		try {
+			$parser->createEdtf( $edtf );
+		} catch ( \InvalidArgumentException $ex ) {
+			return $this->newErrorResult( $ex->getMessage() );
 		}
 
 		return Result::newSuccess();
