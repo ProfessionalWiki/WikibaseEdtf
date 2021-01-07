@@ -13,6 +13,7 @@ class ValidEdtfStrings {
 		yield from self::level0();
 		yield from self::level1();
 		yield from self::level2();
+		yield from self::luxSample();
 	}
 
 	public static function level0(): \Generator {
@@ -104,6 +105,21 @@ class ValidEdtfStrings {
 
 		yield '2004-06-~01/2004-06-~20';
 		yield '2004-06-XX/2004-07-03';
+	}
+
+	public static function luxSample():\Generator {
+		yield '-0044';
+		yield '-0100';
+		yield '02XX';
+		yield '0658?';
+		yield '0738?';
+		yield '1530?';
+		yield '1591-08-31';
+		yield '1896-01-23';
+		yield '1928-10-30';
+		yield '1985-07-09';
+		yield '1520-06';
+		yield '1520';
 	}
 
 }
