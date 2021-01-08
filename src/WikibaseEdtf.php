@@ -4,11 +4,12 @@ declare( strict_types = 1 );
 
 namespace Wikibase\EDTF;
 
-use EDTF\Parser;
+use EDTF\EdtfParser;
+use EDTF\EdtfValidator;
 use ValueValidators\ValueValidator;
-use Wikibase\EDTF\Services\EdtfFormatter;
-use Wikibase\EDTF\Services\EdtfParser;
-use Wikibase\EDTF\Services\EdtfValidator;
+use Wikibase\EDTF\Services\Formatter;
+use Wikibase\EDTF\Services\Parser;
+use Wikibase\EDTF\Services\Validator;
 
 class WikibaseEdtf {
 
@@ -29,16 +30,16 @@ class WikibaseEdtf {
 	protected final function __construct() {
 	}
 
-	public function getEdtfFormatter(): EdtfFormatter {
-		return new EdtfFormatter();
+	public function getFormatter(): Formatter {
+		return new Formatter();
 	}
 
-	public function getEdtfParser(): EdtfParser {
-		return new EdtfParser( new Parser() );
+	public function getParser(): Parser {
+		return new Parser( new EdtfParser() );
 	}
 
-	public function getEdtfValidator(): ValueValidator {
-		return new EdtfValidator();
+	public function getValidator(): ValueValidator {
+		return new Validator( EdtfValidator::newInstance() );
 	}
 
 }

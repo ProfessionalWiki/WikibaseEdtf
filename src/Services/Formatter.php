@@ -8,7 +8,7 @@ use DataValues\StringValue;
 use InvalidArgumentException;
 use ValueFormatters\ValueFormatter;
 
-class EdtfFormatter implements ValueFormatter {
+class Formatter implements ValueFormatter {
 
 	public function format( $value ) {
 		if ( !( $value instanceof StringValue ) ) {

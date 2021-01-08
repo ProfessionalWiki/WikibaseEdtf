@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 use ValueFormatters\FormatterOptions;
 use ValueParsers\ParserOptions;
 use Wikibase\EDTF\HookHandlers;
-use Wikibase\EDTF\Services\EdtfValidator;
+use Wikibase\EDTF\Services\Validator;
 use Wikibase\Lib\DataTypeDefinitions;
 use Wikibase\Lib\Formatters\SnakFormatter;
 use Wikibase\Repo\WikibaseRepo;
@@ -48,7 +48,7 @@ class RepoDataTypesTest extends TestCase {
 		$validatorFactories = $this->getRepoTypeDefinitions()->getValidatorFactoryCallbacks();
 
 		$this->assertArrayHasKey( 'edtf', $validatorFactories );
-		$this->assertInstanceOf( EdtfValidator::class, $validatorFactories['edtf']()[0] );
+		$this->assertInstanceOf( Validator::class, $validatorFactories['edtf']()[0] );
 	}
 
 	public function testParsing() {
@@ -73,7 +73,7 @@ class RepoDataTypesTest extends TestCase {
 
 	public function testValidatorIsRegisteredInValidatorFactory() {
 		$this->assertInstanceOf(
-			EdtfValidator::class,
+			Validator::class,
 			WikibaseRepo::getDefaultInstance()->getDataTypeValidatorFactory()->getValidators( 'edtf' )[0]
 		);
 	}

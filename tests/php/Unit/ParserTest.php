@@ -4,14 +4,14 @@ declare( strict_types = 1 );
 
 namespace Wikibase\EDTF\Tests\Unit;
 
-use EDTF\Parser;
+use EDTF\EdtfParser;
 use PHPUnit\Framework\TestCase;
-use Wikibase\EDTF\Services\EdtfParser;
+use Wikibase\EDTF\Services\Parser;
 
 /**
- * @covers \Wikibase\EDTF\Services\EdtfParser
+ * @covers \Wikibase\EDTF\Services\Parser
  */
-class EdtfParserTest extends TestCase {
+class ParserTest extends TestCase {
 
 	private const VALID_DATE_AND_TIME = '1985-04-12T23:20:30';
 
@@ -22,8 +22,8 @@ class EdtfParserTest extends TestCase {
 		);
 	}
 
-	private function newParser(): EdtfParser {
-		return new EdtfParser( new Parser() );
+	private function newParser(): Parser {
+		return new Parser( new EdtfParser() );
 	}
 
 	public function testNonStringCausesInvalidArgumentException() {

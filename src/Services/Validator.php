@@ -5,12 +5,18 @@ declare( strict_types = 1 );
 namespace Wikibase\EDTF\Services;
 
 use DataValues\StringValue;
-use EDTF\Parser;
+use EDTF\EdtfValidator;
 use ValueValidators\Error;
 use ValueValidators\Result;
 use ValueValidators\ValueValidator;
 
-class EdtfValidator implements ValueValidator {
+class Validator implements ValueValidator {
+
+	private EdtfValidator $edtfValidator;
+
+	public function __construct( EdtfValidator $edtfValidator ) {
+		$this->edtfValidator = $edtfValidator;
+	}
 
 	public function validate( $value ): Result {
 		if ( $value instanceof StringValue ) {
@@ -21,15 +27,11 @@ class EdtfValidator implements ValueValidator {
 	}
 
 	private function validateString( string $edtf ): Result {
-		$parser = new Parser();
-
-		try {
-			$parser->createEdtf( $edtf );
-		} catch ( \InvalidArgumentException $ex ) {
-			return $this->newErrorResult( $ex->getMessage() );
+		if ( $this->edtfValidator->isValidEdtf( $edtf ) ) {
+			return Result::newSuccess();
 		}
 
-		return Result::newSuccess();
+		return $this->newErrorResult( 'Invalid EDTF' );
 	}
 
 	private function newErrorResult( string $message ): Result {

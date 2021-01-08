@@ -5,15 +5,15 @@ declare( strict_types = 1 );
 namespace Wikibase\EDTF\Services;
 
 use DataValues\StringValue;
-use EDTF\Parser;
+use EDTF\EdtfParser;
 use ValueParsers\ParseException;
 use ValueParsers\ValueParser;
 
-class EdtfParser implements ValueParser {
+class Parser implements ValueParser {
 
-	private Parser $edtfParser;
+	private EdtfParser $edtfParser;
 
-	public function __construct( Parser $edtfParser ) {
+	public function __construct( EdtfParser $edtfParser ) {
 		$this->edtfParser = $edtfParser;
 	}
 

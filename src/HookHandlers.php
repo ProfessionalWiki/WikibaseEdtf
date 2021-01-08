@@ -17,13 +17,13 @@ final class HookHandlers {
 			'value-type' => 'string',
 			'expert-module' => 'jquery.valueview.experts.edtf',
 			'validator-factory-callback' => function() {
-				return [ WikibaseEdtf::getGlobalInstance()->getEdtfValidator() ];
+				return [ WikibaseEdtf::getGlobalInstance()->getValidator() ];
 			},
 			'parser-factory-callback' => function() {
-				return WikibaseEdtf::getGlobalInstance()->getEdtfParser();
+				return WikibaseEdtf::getGlobalInstance()->getParser();
 			},
 			'formatter-factory-callback' => function() {
-				return WikibaseEdtf::getGlobalInstance()->getEdtfFormatter();
+				return WikibaseEdtf::getGlobalInstance()->getFormatter();
 			},
 			'rdf-builder-factory-callback' => function () {
 				// TODO
@@ -38,7 +38,7 @@ final class HookHandlers {
 		$dataTypeDefinitions['PT:edtf'] = [
 			'value-type' => 'string',
 			'formatter-factory-callback' => function() {
-				return WikibaseEdtf::getGlobalInstance()->getEdtfFormatter();
+				return WikibaseEdtf::getGlobalInstance()->getFormatter();
 			},
 		];
 	}

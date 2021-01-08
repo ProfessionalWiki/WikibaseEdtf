@@ -7,12 +7,12 @@ namespace Wikibase\EDTF\Tests\Unit;
 use DataValues\BooleanValue;
 use DataValues\StringValue;
 use PHPUnit\Framework\TestCase;
-use Wikibase\EDTF\Services\EdtfFormatter;
+use Wikibase\EDTF\Services\Formatter;
 
 /**
- * @covers \Wikibase\EDTF\Services\EdtfFormatter
+ * @covers \Wikibase\EDTF\Services\Formatter
  */
-class EdtfFormatterTest extends TestCase {
+class FormatterTest extends TestCase {
 
 	private const VALID_DATE_AND_TIME = '1985-04-12T23:20:30';
 
@@ -21,8 +21,8 @@ class EdtfFormatterTest extends TestCase {
 		$this->newFormatter()->format( new BooleanValue( false ) );
 	}
 
-	private function newFormatter(): EdtfFormatter {
-		return new EdtfFormatter();
+	private function newFormatter(): Formatter {
+		return new Formatter();
 	}
 
 	public function testFormatWithFormattedEdtf() {

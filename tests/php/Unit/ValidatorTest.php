@@ -5,14 +5,15 @@ declare( strict_types = 1 );
 namespace Wikibase\EDTF\Tests\Unit;
 
 use DataValues\StringValue;
+use EDTF\EdtfValidator;
+use EDTF\ExampleData\ValidEdtfStrings;
 use PHPUnit\Framework\TestCase;
-use Wikibase\EDTF\Services\EdtfValidator;
-use Wikibase\EDTF\Tests\ValidEdtfStrings;
+use Wikibase\EDTF\Services\Validator;
 
 /**
- * @covers \Wikibase\EDTF\Services\EdtfValidator
+ * @covers \Wikibase\EDTF\Services\Validator
  */
-class EdtfValidatorTest extends TestCase {
+class ValidatorTest extends TestCase {
 
 	/**
 	 * @dataProvider validValueProvider
@@ -24,13 +25,13 @@ class EdtfValidatorTest extends TestCase {
 	}
 
 	public function validValueProvider(): \Generator {
-		foreach ( ValidEdtfStrings::allFromStandard() as $key => $value ) {
+		foreach ( ValidEdtfStrings::all() as $key => $value ) {
 			yield $key => [ $value ];
 		}
 	}
 
-	private function newValidator(): EdtfValidator {
-		return new EdtfValidator();
+	private function newValidator(): Validator {
+		return new Validator( EdtfValidator::newInstance() );
 	}
 
 	/**
@@ -47,13 +48,15 @@ class EdtfValidatorTest extends TestCase {
 		yield 'random stuff' => [ '~=[,,_,,]:3' ];
 
 		yield 'stuff after valid date' => [ '1985wtf' ];
-//	TODO	yield 'stuff before valid date' => [ 'wtf1985' ];
-//	TODO	yield 'stuff inside valid date' => [ '19wtf85' ];
+		yield 'stuff before valid date' => [ 'wtf1985' ];
+		yield 'stuff inside valid date' => [ '19wtf85' ];
 
+		yield 'day too high' => [ '2021-01-32' ];
+		yield 'month too high' => [ '2021-13-01' ];
 
-		foreach ( ValidEdtfStrings::allFromStandard() as $key => $value ) {
-			// TODO
-			// yield [ 'invalid ' . $value ];
+		foreach ( ValidEdtfStrings::all() as $key => $value ) {
+			yield [ 'invalid ' . $value ];
+			yield [ $value. 'invalid' ];
 		}
 	}
 
