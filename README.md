@@ -40,7 +40,7 @@ You can verify the extension was enabled successfully by opening your wikis Spec
 
 ## Running the tests
 
-* PHP tests: `php tests/phpunit/phpunit.php extensions/WikibaseEdtf/tests/`
+* PHP tests: `php tests/phpunit/phpunit.php -c extensions/WikibaseEdtf/`
 
 ## Release notes
 
