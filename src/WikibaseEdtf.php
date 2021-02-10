@@ -10,10 +10,14 @@ use EDTF\Humanize\HumanizerFactory;
 use ValueFormatters\FormatterOptions;
 use ValueFormatters\ValueFormatter;
 use ValueValidators\ValueValidator;
-use Wikibase\EDTF\Services\HumanizingFormatter;
+use Wikibase\EDTF\Services\HumanizingHtmlFormatter;
 use Wikibase\EDTF\Services\Parser;
 use Wikibase\EDTF\Services\PlainFormatter;
 use Wikibase\EDTF\Services\Validator;
+use Wikibase\Lib\Formatters\SnakFormat;
+use Wikibase\Lib\Formatters\SnakFormatter;
+use Wikibase\Lib\Formatters\WikiLinkHtmlFormatter;
+use Wikibase\Lib\Formatters\WikiLinkWikitextFormatter;
 
 class WikibaseEdtf {
 
@@ -35,13 +39,15 @@ class WikibaseEdtf {
 	}
 
 	public function getFormatter( string $format, FormatterOptions $options ): ValueFormatter {
-		if ( $format === 'text/plain' ) {
-			return new PlainFormatter();
+		switch ( ( new SnakFormat() )->getBaseFormat( $format ) ) {
+			case SnakFormatter::FORMAT_HTML:
+				return new HumanizingHtmlFormatter(
+					HumanizerFactory::newStringHumanizerForLanguage( $options->getOption( 'lang' ) )
+				);
+			case SnakFormatter::FORMAT_WIKI:
+			default:
+				return new PlainFormatter();
 		}
-
-		return new HumanizingFormatter(
-			HumanizerFactory::newStringHumanizerForLanguage( $options->getOption( 'lang' ) )
-		);
 	}
 
 	public function getParser(): Parser {

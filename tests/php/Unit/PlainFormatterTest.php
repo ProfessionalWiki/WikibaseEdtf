@@ -6,27 +6,26 @@ namespace Wikibase\EDTF\Tests\Unit;
 
 use DataValues\BooleanValue;
 use DataValues\StringValue;
-use EDTF\Humanize\HumanizerFactory;
 use PHPUnit\Framework\TestCase;
-use Wikibase\EDTF\Services\HumanizingFormatter;
+use Wikibase\EDTF\Services\PlainFormatter;
 
 /**
- * @covers \Wikibase\EDTF\Services\HumanizingFormatter
+ * @covers \Wikibase\EDTF\Services\PlainFormatter
  */
-class FormatterTest extends TestCase {
+class PlainFormatterTest extends TestCase {
 
 	public function testThrowsExceptionForNonStringValues() {
 		$this->expectException( \InvalidArgumentException::class );
 		$this->newFormatter()->format( new BooleanValue( false ) );
 	}
 
-	private function newFormatter(): HumanizingFormatter {
-		return new HumanizingFormatter( HumanizerFactory::newStringHumanizerForLanguage( 'en' ) );
+	private function newFormatter(): PlainFormatter {
+		return new PlainFormatter();
 	}
 
-	public function testFormatWithFormattedEdtf() {
+	public function testFormatReturnsEdtf() {
 		$this->assertSame(
-			'April 1985',
+			'1985-4',
 			$this->newFormatter()->format( new StringValue( '1985-4' ) )
 		);
 	}
