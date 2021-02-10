@@ -22,8 +22,8 @@ final class HookHandlers {
 			'parser-factory-callback' => function() {
 				return WikibaseEdtf::getGlobalInstance()->getParser();
 			},
-			'formatter-factory-callback' => function() {
-				return WikibaseEdtf::getGlobalInstance()->getFormatter();
+			'formatter-factory-callback' => function( string $format, FormatterOptions $options ) {
+				return WikibaseEdtf::getGlobalInstance()->getFormatter( $format, $options );
 			},
 			'rdf-builder-factory-callback' => function () {
 				// TODO

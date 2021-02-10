@@ -6,29 +6,28 @@ namespace Wikibase\EDTF\Tests\Unit;
 
 use DataValues\BooleanValue;
 use DataValues\StringValue;
+use EDTF\Humanize\HumanizerFactory;
 use PHPUnit\Framework\TestCase;
-use Wikibase\EDTF\Services\Formatter;
+use Wikibase\EDTF\Services\HumanizingFormatter;
 
 /**
- * @covers \Wikibase\EDTF\Services\Formatter
+ * @covers \Wikibase\EDTF\Services\HumanizingFormatter
  */
 class FormatterTest extends TestCase {
-
-	private const VALID_DATE_AND_TIME = '1985-04-12T23:20:30';
 
 	public function testThrowsExceptionForNonStringValues() {
 		$this->expectException( \InvalidArgumentException::class );
 		$this->newFormatter()->format( new BooleanValue( false ) );
 	}
 
-	private function newFormatter(): Formatter {
-		return new Formatter();
+	private function newFormatter(): HumanizingFormatter {
+		return new HumanizingFormatter( HumanizerFactory::newStringHumanizerForLanguage( 'en' ) );
 	}
 
 	public function testFormatWithFormattedEdtf() {
 		$this->assertSame(
-			self::VALID_DATE_AND_TIME,
-			$this->newFormatter()->format( new StringValue( self::VALID_DATE_AND_TIME ) )
+			'April 1985',
+			$this->newFormatter()->format( new StringValue( '1985-4' ) )
 		);
 	}
 

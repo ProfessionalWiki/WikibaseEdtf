@@ -6,9 +6,13 @@ namespace Wikibase\EDTF;
 
 use EDTF\EdtfParser;
 use EDTF\EdtfValidator;
+use EDTF\Humanize\HumanizerFactory;
+use ValueFormatters\FormatterOptions;
+use ValueFormatters\ValueFormatter;
 use ValueValidators\ValueValidator;
-use Wikibase\EDTF\Services\Formatter;
+use Wikibase\EDTF\Services\HumanizingFormatter;
 use Wikibase\EDTF\Services\Parser;
+use Wikibase\EDTF\Services\PlainFormatter;
 use Wikibase\EDTF\Services\Validator;
 
 class WikibaseEdtf {
@@ -30,8 +34,14 @@ class WikibaseEdtf {
 	protected final function __construct() {
 	}
 
-	public function getFormatter(): Formatter {
-		return new Formatter();
+	public function getFormatter( string $format, FormatterOptions $options ): ValueFormatter {
+		if ( $format === 'text/plain' ) {
+			return new PlainFormatter();
+		}
+
+		return new HumanizingFormatter(
+			HumanizerFactory::newStringHumanizerForLanguage( $options->getOption( 'lang' ) )
+		);
 	}
 
 	public function getParser(): Parser {
