@@ -26,7 +26,7 @@ class HumanizingHtmlFormatterTest extends TestCase {
 
 	public function testHumanizes() {
 		$this->assertSame(
-			'<div class="edtf-value"><span class="edtf-humanized">April 1985</span><br><span class="edtf-plain">1985-04</span></div>',
+			'<div class="edtf-value"><span class="edtf-plain">1985-04</span><br><span class="edtf-humanized">(April 1985)</span></div>',
 			$this->newFormatter()->format( new StringValue( '1985-04' ) )
 		);
 	}

@@ -30,7 +30,7 @@ class HumanizingHtmlFormatter implements ValueFormatter {
 		}
 
 		return $this->warpInEdtfDiv(
-			$this->buildHumanizedHtml( $humanized ) . '<br>' . $this->buildPlainValueHtml( $edtf )
+			$this->buildPlainValueHtml( $edtf ) . '<br>' . $this->buildHumanizedHtml( $humanized )
 		);
 	}
 
@@ -46,7 +46,7 @@ class HumanizingHtmlFormatter implements ValueFormatter {
 		return Html::element(
 			'span',
 			[ 'class' => 'edtf-humanized' ],
-			$humanizedEdtf
+			"($humanizedEdtf)"
 		);
 	}
 
