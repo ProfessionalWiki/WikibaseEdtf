@@ -23,22 +23,26 @@ class HumanizingHtmlFormatter implements ValueFormatter {
 			throw new InvalidArgumentException( 'Data value type mismatch. Expected a StringValue.' );
 		}
 
-		$humanized = $this->humanizer->humanize( $edtf->getValue() );
+		return $this->formatString( $edtf->getValue() );
+	}
 
-		if ( $humanized === $edtf->getValue() ) {
-			return $this->warpInEdtfDiv( $this->buildPlainValueHtml( $edtf ) );
+	private function formatString( string $edtfString ): string {
+		$humanized = $this->humanizer->humanize( $edtfString );
+
+		if ( $humanized === $edtfString ) {
+			return $this->warpInEdtfDiv( $this->buildPlainValueHtml( $edtfString ) );
 		}
 
 		return $this->warpInEdtfDiv(
-			$this->buildPlainValueHtml( $edtf ) . '<br>' . $this->buildHumanizedHtml( $humanized )
+			$this->buildPlainValueHtml( $edtfString ) . '<br>' . $this->buildHumanizedHtml( $humanized )
 		);
 	}
 
-	private function buildPlainValueHtml( StringValue $edtf ): string {
+	private function buildPlainValueHtml( $edtfString ): string {
 		return Html::element(
 			'span',
 			[ 'class' => 'edtf-plain' ],
-			$edtf->getValue()
+			$edtfString
 		);
 	}
 
