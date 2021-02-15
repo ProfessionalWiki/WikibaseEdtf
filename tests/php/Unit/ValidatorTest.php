@@ -5,7 +5,7 @@ declare( strict_types = 1 );
 namespace Wikibase\EDTF\Tests\Unit;
 
 use DataValues\StringValue;
-use EDTF\EdtfValidator;
+use EDTF\EdtfFactory;
 use EDTF\ExampleData\ValidEdtfStrings;
 use PHPUnit\Framework\TestCase;
 use Wikibase\EDTF\Services\Validator;
@@ -31,7 +31,7 @@ class ValidatorTest extends TestCase {
 	}
 
 	private function newValidator(): Validator {
-		return new Validator( EdtfValidator::newInstance() );
+		return new Validator( EdtfFactory::newValidator() );
 	}
 
 	/**

@@ -48,6 +48,9 @@
 
 	"ResourceModules": {
 		"jquery.valueview.experts.edtf": {
+			"styles": [
+				"EDTF.css"
+			],
 			"scripts": [
 				"EDTF.expert.js"
 			],
