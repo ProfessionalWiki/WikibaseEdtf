@@ -4,6 +4,7 @@ declare( strict_types = 1 );
 
 namespace Wikibase\EDTF;
 
+use EDTF\EdtfFactory;
 use EDTF\EdtfParser;
 use EDTF\EdtfValidator;
 use EDTF\Humanize\HumanizerFactory;
@@ -42,7 +43,8 @@ class WikibaseEdtf {
 		switch ( ( new SnakFormat() )->getBaseFormat( $format ) ) {
 			case SnakFormatter::FORMAT_HTML:
 				return new HumanizingHtmlFormatter(
-					HumanizerFactory::newStringHumanizerForLanguage( $options->getOption( 'lang' ) )
+					EdtfFactory::newParser(),
+					EdtfFactory::newStructuredHumanizerForLanguage( $options->getOption( 'lang' ) )
 				);
 			case SnakFormatter::FORMAT_WIKI:
 			default:
@@ -51,11 +53,11 @@ class WikibaseEdtf {
 	}
 
 	public function getParser(): Parser {
-		return new Parser( new EdtfParser() );
+		return new Parser( EdtfFactory::newParser() );
 	}
 
 	public function getValidator(): ValueValidator {
-		return new Validator( EdtfValidator::newInstance() );
+		return new Validator( EdtfFactory::newValidator() );
 	}
 
 }

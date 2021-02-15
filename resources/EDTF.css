@@ -1,0 +1,8 @@
+.edtf-humanized, .edtf-humanized-context {
+	color: grey;
+}
+
+.edtf-humanized-context {
+	display: block;
+	margin-top: 7px;
+}
