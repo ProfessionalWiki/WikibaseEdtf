@@ -6,3 +6,19 @@
 	display: block;
 	margin-top: 7px;
 }
+
+ul.edtf-humanized {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.edtf-humanized li {
+	padding-left: 1.1em;
+	text-indent: -.6em;
+}
+
+ul.edtf-humanized li::before {
+	content: "◦ ";
+	color: grey;
+}
