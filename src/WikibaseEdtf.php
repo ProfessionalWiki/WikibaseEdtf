@@ -5,9 +5,6 @@ declare( strict_types = 1 );
 namespace Wikibase\EDTF;
 
 use EDTF\EdtfFactory;
-use EDTF\EdtfParser;
-use EDTF\EdtfValidator;
-use EDTF\Humanize\HumanizerFactory;
 use ValueFormatters\FormatterOptions;
 use ValueFormatters\ValueFormatter;
 use ValueValidators\ValueValidator;
@@ -17,8 +14,6 @@ use Wikibase\EDTF\Services\PlainFormatter;
 use Wikibase\EDTF\Services\Validator;
 use Wikibase\Lib\Formatters\SnakFormat;
 use Wikibase\Lib\Formatters\SnakFormatter;
-use Wikibase\Lib\Formatters\WikiLinkHtmlFormatter;
-use Wikibase\Lib\Formatters\WikiLinkWikitextFormatter;
 
 class WikibaseEdtf {
 
