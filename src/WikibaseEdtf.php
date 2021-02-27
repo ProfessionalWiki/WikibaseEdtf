@@ -17,7 +17,7 @@ use Wikibase\Lib\Formatters\SnakFormatter;
 
 class WikibaseEdtf {
 
-	protected static /* ?self */ $instance;
+	protected static ?self $instance;
 
 	public static function getGlobalInstance(): self {
 		if ( !isset( self::$instance ) ) {
