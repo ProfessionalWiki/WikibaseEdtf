@@ -6,6 +6,9 @@
 
 [MediaWiki] extension that adds support for the [Extended Date/Time Format (EDTF) Specification][EDTF] to [Wikibase] via a new data type.
 
+Wikibase EDTF has been made possible with the financial support of the Luxembourg Ministry of Culture.
+It is developed by [Professional.Wiki].
+
 ## Platform requirements
 
 * [PHP] 7.4 or later, including PHP 8.0
