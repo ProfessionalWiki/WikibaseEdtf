@@ -89,4 +89,15 @@ class TimeValueBuilderTest extends TestCase {
 		);
 	}
 
+	public function testSet(): void {
+		$this->assertEquals(
+			[
+				$this->newTimeValue( '+2021-00-00T00:00:00Z', 0, TimeValue::PRECISION_YEAR ),
+				$this->newTimeValue( '+2021-03-13T00:00:00Z', 0, TimeValue::PRECISION_DAY ),
+				$this->newTimeValue( '+2021-03-14T00:01:42Z', 60, TimeValue::PRECISION_MINUTE )
+			],
+			$this->edtfToMultipleTimeValues( '[2021, 2021-03-13, 2021-03-14T00:01:42+01:00]' )
+		);
+	}
+
 }

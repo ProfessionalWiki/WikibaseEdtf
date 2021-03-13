@@ -9,6 +9,7 @@ use EDTF\EdtfParser;
 use EDTF\EdtfValue;
 use EDTF\Model\ExtDate;
 use EDTF\Model\ExtDateTime;
+use EDTF\Model\Set;
 
 class TimeValueBuilder {
 
@@ -23,6 +24,13 @@ class TimeValueBuilder {
 	 */
 	public function edtfToTimeValues( string $edtfString ): array {
 		$edtf = $this->edtfParser->parse( $edtfString )->getEdtfValue();
+
+		if ( $edtf instanceof Set ) {
+			return array_map(
+				fn( EdtfValue $edtfValue ) => $this->singleValueEdtfToTimeValue( $edtfValue ),
+				$edtf->getDates()
+			);
+		}
 
 		return [
 			$this->singleValueEdtfToTimeValue( $edtf )
