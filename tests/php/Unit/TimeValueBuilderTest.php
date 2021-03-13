@@ -82,4 +82,11 @@ class TimeValueBuilderTest extends TestCase {
 		);
 	}
 
+	public function testNegativeTimeZone(): void {
+		$this->assertEquals(
+			$this->newTimeValue( '+2021-03-14T00:01:42Z', -150, TimeValue::PRECISION_MINUTE ),
+			$this->edtfToTimeValue( '2021-03-14T00:01:42-02:30' )
+		);
+	}
+
 }
