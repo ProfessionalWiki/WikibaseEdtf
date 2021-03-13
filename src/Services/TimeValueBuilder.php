@@ -6,6 +6,7 @@ namespace Wikibase\EDTF\Services;
 
 use DataValues\TimeValue;
 use EDTF\EdtfParser;
+use EDTF\EdtfValue;
 use EDTF\Model\ExtDate;
 use EDTF\Model\ExtDateTime;
 
@@ -17,14 +18,22 @@ class TimeValueBuilder {
 		$this->edtfParser = $edtfParser;
 	}
 
-	public function edtfToTimeValue( string $edtfString ): TimeValue {
+	/**
+	 * @return TimeValue[]
+	 */
+	public function edtfToTimeValues( string $edtfString ): array {
 		$edtf = $this->edtfParser->parse( $edtfString )->getEdtfValue();
 
+		return [
+			$this->singleValueEdtfToTimeValue( $edtf )
+		];
+	}
 
+	private function singleValueEdtfToTimeValue( EdtfValue $edtf ): TimeValue {
 		if ( $edtf instanceof ExtDate ) {
 			return $this->newTimeValue(
 				$this->buildDateIsoTimeStamp( $edtf ),
-				0, // TODO
+				0,
 				$this->getDatePrecision( $edtf )
 			);
 		}
@@ -37,9 +46,7 @@ class TimeValueBuilder {
 			);
 		}
 
-		// TODO
-
-		throw new \InvalidArgumentException( 'Not implemented yet' );
+		throw new \InvalidArgumentException();
 	}
 
 	private function newTimeValue( string $isoLikeTimestamp, int $timezone, int $precision ): TimeValue {

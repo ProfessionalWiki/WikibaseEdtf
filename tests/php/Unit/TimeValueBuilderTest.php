@@ -22,7 +22,11 @@ class TimeValueBuilderTest extends TestCase {
 	}
 
 	private function edtfToTimeValue( string $edtf ): TimeValue {
-		return ( new TimeValueBuilder( EdtfFactory::newParser() ) )->edtfToTimeValue( $edtf );
+		return $this->edtfToMultipleTimeValues( $edtf )[0];
+	}
+
+	private function edtfToMultipleTimeValues( string $edtf ): array {
+		return ( new TimeValueBuilder( EdtfFactory::newParser() ) )->edtfToTimeValues( $edtf );
 	}
 
 	private function newTimeValue( string $isoLikeTime, int $timezone, int $precision ): TimeValue {

@@ -4,6 +4,7 @@ declare( strict_types = 1 );
 
 namespace Wikibase\EDTF\Services;
 
+use DataValues\TimeValue;
 use Wikibase\DataModel\Snak\PropertyValueSnak;
 use Wikibase\Repo\Rdf\Values\TimeRdfBuilder;
 use Wikibase\Repo\Rdf\ValueSnakRdfBuilder;
@@ -27,20 +28,28 @@ class RdfBuilder implements ValueSnakRdfBuilder {
 	 * @param PropertyValueSnak $snak
 	 */
 	public function addValue( RdfWriter $writer, $propertyValueNamespace, $propertyValueLName, $dataType, $snakNamespace, PropertyValueSnak $snak ) {
-		$this->timeRdfBuilder->addValue(
-			$writer,
-			$propertyValueNamespace,
-			$propertyValueLName,
-			$dataType,
-			$snakNamespace,
-			$this->edtfSnakToTimeSnak( $snak )
-		);
+		foreach ( $this->edtfSnakToTimeSnaks( $snak ) as $timeValueSnak ) {
+			$this->timeRdfBuilder->addValue(
+				$writer,
+				$propertyValueNamespace,
+				$propertyValueLName,
+				$dataType,
+				$snakNamespace,
+				$timeValueSnak
+			);
+		}
 	}
 
-	private function edtfSnakToTimeSnak( PropertyValueSnak $edtfSnak ): PropertyValueSnak {
-		return new PropertyValueSnak(
-			$edtfSnak->getPropertyId(),
-			$this->timeValueBuilder->edtfToTimeValue( $edtfSnak->getDataValue()->getValue() )
+	/**
+	 * @return PropertyValueSnak[]
+	 */
+	private function edtfSnakToTimeSnaks( PropertyValueSnak $edtfSnak ): array {
+		return array_map(
+			fn ( TimeValue $time ) => new PropertyValueSnak(
+				$edtfSnak->getPropertyId(),
+				$time
+			),
+			$this->timeValueBuilder->edtfToTimeValues( $edtfSnak->getDataValue()->getValue() )
 		);
 	}
 
