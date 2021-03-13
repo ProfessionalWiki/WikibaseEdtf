@@ -9,6 +9,7 @@ use EDTF\EdtfParser;
 use EDTF\EdtfValue;
 use EDTF\Model\ExtDate;
 use EDTF\Model\ExtDateTime;
+use EDTF\Model\Interval;
 use EDTF\Model\Season;
 use EDTF\Model\Set;
 
@@ -31,6 +32,13 @@ class TimeValueBuilder {
 				fn( EdtfValue $edtfValue ) => $this->singleValueEdtfToTimeValue( $edtfValue ),
 				$edtf->getDates()
 			);
+		}
+
+		if ( $edtf instanceof Interval ) {
+			return [
+				$this->singleValueEdtfToTimeValue( $edtf->getStartDate() ),
+				$this->singleValueEdtfToTimeValue( $edtf->getEndDate() )
+			];
 		}
 
 		return [
