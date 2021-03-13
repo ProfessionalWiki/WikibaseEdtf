@@ -21,11 +21,11 @@ class TimeValueBuilder {
 
 		if ( $edtf instanceof ExtDate ) {
 			return new TimeValue(
-				"+{$edtf->getYear()}-00-00T00:00:00Z", // TODO
+				$this->buildIsoTimeStamp( $edtf ),
 				0, // TODO
 				0, // Gets discarded
 				0, // Gets discarded
-				TimeValue::PRECISION_YEAR, // TODO
+				$this->getPrecision( $edtf ),
 				TimeValue::CALENDAR_GREGORIAN // Gets discarded
 			);
 		}
@@ -33,6 +33,27 @@ class TimeValueBuilder {
 		// TODO
 
 		throw new \InvalidArgumentException( 'Not implemented yet' );
+	}
+
+	private function buildIsoTimeStamp( ExtDate $edtf ): string {
+		return sprintf(
+			'%s-%02d-%02dT00:00:00Z',
+			'+' . $edtf->getYear(),
+			$edtf->getMonth() ?? 0,
+			$edtf->getDay() ?? 0,
+		);
+	}
+
+	private function getPrecision( ExtDate $edtf ): int {
+		if ( $edtf->getDay() !== null ) {
+			return TimeValue::PRECISION_DAY;
+		}
+
+		if ( $edtf->getMonth() !== null ) {
+			return TimeValue::PRECISION_MONTH;
+		}
+
+		return TimeValue::PRECISION_YEAR;
 	}
 
 }

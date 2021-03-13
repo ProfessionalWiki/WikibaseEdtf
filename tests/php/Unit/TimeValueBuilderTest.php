@@ -14,7 +14,7 @@ use Wikibase\EDTF\Services\TimeValueBuilder;
  */
 class TimeValueBuilderTest extends TestCase {
 
-	public function testFoo(): void {
+	public function testYear(): void {
 		$this->assertEquals(
 			$this->newTimeValue( '+2021-00-00T00:00:00Z', 0, TimeValue::PRECISION_YEAR ),
 			$this->edtfToTimeValue( '2021' )
@@ -33,6 +33,13 @@ class TimeValueBuilderTest extends TestCase {
 			0, // Gets discarded
 			$precision,
 			TimeValue::CALENDAR_GREGORIAN // Gets discarded
+		);
+	}
+
+	public function testMonth(): void {
+		$this->assertEquals(
+			$this->newTimeValue( '+2021-11-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
+			$this->edtfToTimeValue( '2021-11' )
 		);
 	}
 
