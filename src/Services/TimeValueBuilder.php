@@ -7,6 +7,7 @@ namespace Wikibase\EDTF\Services;
 use DataValues\TimeValue;
 use EDTF\EdtfParser;
 use EDTF\Model\ExtDate;
+use EDTF\Model\ExtDateTime;
 
 class TimeValueBuilder {
 
@@ -19,14 +20,20 @@ class TimeValueBuilder {
 	public function edtfToTimeValue( string $edtfString ): TimeValue {
 		$edtf = $this->edtfParser->parse( $edtfString )->getEdtfValue();
 
+
 		if ( $edtf instanceof ExtDate ) {
-			return new TimeValue(
-				$this->buildIsoTimeStamp( $edtf ),
+			return $this->newTimeValue(
+				$this->buildDateIsoTimeStamp( $edtf ),
 				0, // TODO
-				0, // Gets discarded
-				0, // Gets discarded
-				$this->getPrecision( $edtf ),
-				TimeValue::CALENDAR_GREGORIAN // Gets discarded
+				$this->getDatePrecision( $edtf )
+			);
+		}
+
+		if ( $edtf instanceof ExtDateTime ) {
+			return $this->newTimeValue(
+				$this->buildTimeIsoTimeStamp( $edtf ),
+				$edtf->getTimezoneOffset() ?? 0,
+				$this->getTimePrecision( $edtf )
 			);
 		}
 
@@ -35,16 +42,31 @@ class TimeValueBuilder {
 		throw new \InvalidArgumentException( 'Not implemented yet' );
 	}
 
-	private function buildIsoTimeStamp( ExtDate $edtf ): string {
+	private function newTimeValue( string $isoLikeTimestamp, int $timezone, int $precision ): TimeValue {
+		return new TimeValue(
+			$isoLikeTimestamp,
+			$timezone,
+			0, // Gets discarded
+			0, // Gets discarded
+			$precision,
+			TimeValue::CALENDAR_GREGORIAN // Gets discarded
+		);
+	}
+
+	private function buildDateIsoTimeStamp( ExtDate $edtf ): string {
+		return $this->buildDateString( $edtf ) . 'T00:00:00Z';
+	}
+
+	private function buildDateString( ExtDate $edtf ): string {
 		return sprintf(
-			'%s-%02d-%02dT00:00:00Z',
+			'%s-%02d-%02d',
 			$edtf->getYear() < 0 ? $edtf->getYear() : '+' . $edtf->getYear(),
 			$edtf->getMonth() ?? 0,
 			$edtf->getDay() ?? 0,
 		);
 	}
 
-	private function getPrecision( ExtDate $edtf ): int {
+	private function getDatePrecision( ExtDate $edtf ): int {
 		if ( $edtf->getDay() !== null ) {
 			return TimeValue::PRECISION_DAY;
 		}
@@ -54,6 +76,23 @@ class TimeValueBuilder {
 		}
 
 		return TimeValue::PRECISION_YEAR;
+	}
+
+	private function getTimePrecision( ExtDateTime $edtf ): int {
+		return TimeValue::PRECISION_MINUTE;
+	}
+
+	private function buildTimeIsoTimeStamp( ExtDateTime $edtf ): string {
+		return $this->buildDateString( $edtf->getDate() ) . $this->buildTimeString( $edtf );
+	}
+
+	private function buildTimeString( ExtDateTime $edtf ): string {
+		return sprintf(
+			'T%02d:%02d:%02dZ',
+			$edtf->getHour(),
+			$edtf->getMinute(),
+			$edtf->getSecond(),
+		);
 	}
 
 }

@@ -57,4 +57,25 @@ class TimeValueBuilderTest extends TestCase {
 		);
 	}
 
+	public function testShortYear(): void {
+		$this->assertEquals(
+			$this->newTimeValue( '+0012-00-00T00:00:00Z', 0, TimeValue::PRECISION_YEAR ),
+			$this->edtfToTimeValue( '12' )
+		);
+	}
+
+	public function testHoursMinutesAndSeconds(): void {
+		$this->assertEquals(
+			$this->newTimeValue( '+2021-03-14T00:01:42Z', 0, TimeValue::PRECISION_MINUTE ),
+			$this->edtfToTimeValue( '2021-03-14T00:01:42' )
+		);
+	}
+
+	public function testTimeZone(): void {
+		$this->assertEquals(
+			$this->newTimeValue( '+2021-03-14T00:01:42Z', 60, TimeValue::PRECISION_MINUTE ),
+			$this->edtfToTimeValue( '2021-03-14T00:01:42+01:00' )
+		);
+	}
+
 }
