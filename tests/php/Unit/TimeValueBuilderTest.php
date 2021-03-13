@@ -100,4 +100,11 @@ class TimeValueBuilderTest extends TestCase {
 		);
 	}
 
+	public function testSeason(): void {
+		$this->assertEquals(
+			$this->newTimeValue( '+2021-01-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
+			$this->edtfToTimeValue( '2021-21' )
+		);
+	}
+
 }

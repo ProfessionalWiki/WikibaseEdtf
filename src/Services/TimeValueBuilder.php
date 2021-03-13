@@ -9,6 +9,7 @@ use EDTF\EdtfParser;
 use EDTF\EdtfValue;
 use EDTF\Model\ExtDate;
 use EDTF\Model\ExtDateTime;
+use EDTF\Model\Season;
 use EDTF\Model\Set;
 
 class TimeValueBuilder {
@@ -52,6 +53,13 @@ class TimeValueBuilder {
 				$edtf->getTimezoneOffset() ?? 0,
 				$this->getTimePrecision( $edtf )
 			);
+		}
+
+		if ( $edtf instanceof Season ) {
+			return $this->singleValueEdtfToTimeValue( new ExtDate(
+				$edtf->getYear(),
+				1 // TODO
+			) );
 		}
 
 		throw new \InvalidArgumentException();
