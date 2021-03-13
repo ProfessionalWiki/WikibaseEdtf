@@ -38,8 +38,15 @@ class TimeValueBuilderTest extends TestCase {
 
 	public function testMonth(): void {
 		$this->assertEquals(
-			$this->newTimeValue( '+2021-11-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
-			$this->edtfToTimeValue( '2021-11' )
+			$this->newTimeValue( '+2021-03-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
+			$this->edtfToTimeValue( '2021-03' )
+		);
+	}
+
+	public function testDay(): void {
+		$this->assertEquals(
+			$this->newTimeValue( '+2021-03-13T00:00:00Z', 0, TimeValue::PRECISION_DAY ),
+			$this->edtfToTimeValue( '2021-03-13' )
 		);
 	}
 
