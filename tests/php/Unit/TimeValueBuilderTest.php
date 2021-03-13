@@ -50,4 +50,11 @@ class TimeValueBuilderTest extends TestCase {
 		);
 	}
 
+	public function testNegativeYear(): void {
+		$this->assertEquals(
+			$this->newTimeValue( '-2021-00-00T00:00:00Z', 0, TimeValue::PRECISION_YEAR ),
+			$this->edtfToTimeValue( '-2021' )
+		);
+	}
+
 }

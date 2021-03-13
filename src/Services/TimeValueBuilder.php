@@ -38,7 +38,7 @@ class TimeValueBuilder {
 	private function buildIsoTimeStamp( ExtDate $edtf ): string {
 		return sprintf(
 			'%s-%02d-%02dT00:00:00Z',
-			'+' . $edtf->getYear(),
+			$edtf->getYear() < 0 ? $edtf->getYear() : '+' . $edtf->getYear(),
 			$edtf->getMonth() ?? 0,
 			$edtf->getDay() ?? 0,
 		);
