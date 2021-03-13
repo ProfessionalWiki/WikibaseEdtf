@@ -5,6 +5,9 @@ declare( strict_types = 1 );
 namespace Wikibase\EDTF;
 
 use ValueFormatters\FormatterOptions;
+use Wikibase\Repo\Rdf\DedupeBag;
+use Wikibase\Repo\Rdf\RdfVocabulary;
+use Wikimedia\Purtle\RdfWriter;
 
 final class HookHandlers {
 
@@ -25,12 +28,11 @@ final class HookHandlers {
 			'formatter-factory-callback' => function( string $format, FormatterOptions $options ) {
 				return WikibaseEdtf::getGlobalInstance()->getFormatter( $format, $options );
 			},
-			'rdf-builder-factory-callback' => function () {
-				// TODO
+			'rdf-builder-factory-callback' => function ( int $flags, RdfVocabulary $vocab, RdfWriter $writer, $tracker, DedupeBag $dedupe ) {
+				return WikibaseEdtf::getGlobalInstance()->getRdfBuilder( $flags, $vocab, $writer, $dedupe );
 			},
-			'rdf-data-type' => function() {
-				// TODO
-			},
+//			'rdf-data-type' => function() {
+//			},
 		];
 	}
 

@@ -11,9 +11,19 @@ use ValueValidators\ValueValidator;
 use Wikibase\EDTF\Services\HumanizingHtmlFormatter;
 use Wikibase\EDTF\Services\Parser;
 use Wikibase\EDTF\Services\PlainFormatter;
+use Wikibase\EDTF\Services\RdfBuilder;
+use Wikibase\EDTF\Services\TimeValueBuilder;
 use Wikibase\EDTF\Services\Validator;
 use Wikibase\Lib\Formatters\SnakFormat;
 use Wikibase\Lib\Formatters\SnakFormatter;
+use Wikibase\Repo\Rdf\DedupeBag;
+use Wikibase\Repo\Rdf\JulianDateTimeValueCleaner;
+use Wikibase\Repo\Rdf\RdfProducer;
+use Wikibase\Repo\Rdf\RdfVocabulary;
+use Wikibase\Repo\Rdf\Values\ComplexValueRdfHelper;
+use Wikibase\Repo\Rdf\Values\TimeRdfBuilder;
+use Wikibase\Repo\Rdf\ValueSnakRdfBuilder;
+use Wikimedia\Purtle\RdfWriter;
 
 class WikibaseEdtf {
 
@@ -53,6 +63,18 @@ class WikibaseEdtf {
 
 	public function getValidator(): ValueValidator {
 		return new Validator( EdtfFactory::newValidator() );
+	}
+
+	public function getRdfBuilder( int $flags, RdfVocabulary $vocab, RdfWriter $writer, DedupeBag $dedupe ): ValueSnakRdfBuilder {
+		return new RdfBuilder(
+			new TimeRdfBuilder(
+				new JulianDateTimeValueCleaner(),
+				( $flags & RdfProducer::PRODUCE_FULL_VALUES ) ? new ComplexValueRdfHelper( $vocab, $writer->sub(), $dedupe ) : null
+			),
+			new TimeValueBuilder(
+				EdtfFactory::newParser()
+			)
+		);
 	}
 
 }
