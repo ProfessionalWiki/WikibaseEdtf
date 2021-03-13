@@ -56,4 +56,11 @@ class HumanizingHtmlFormatterTest extends TestCase {
 		);
 	}
 
+	public function testDoesNotShowHumanizationWhenIdenticalToPlainValue() {
+		$this->assertSame(
+			'<div class="edtf-value"><span class="edtf-plain">1985</span></div>',
+			$this->newFormatter()->format( new StringValue( '1985' ) )
+		);
+	}
+
 }

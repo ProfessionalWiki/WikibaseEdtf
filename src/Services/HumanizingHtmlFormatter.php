@@ -45,6 +45,10 @@ class HumanizingHtmlFormatter implements ValueFormatter {
 		}
 
 		if ( $humanizationResult->isOneMessage() ) {
+			if ( $edtfString === $humanizationResult->getSimpleHumanization() ) {
+				return $this->buildPlainValueHtml( $edtfString );
+			}
+
 			return $this->buildPlainValueHtml( $edtfString )
 				. '<br>'
 				. $this->buildHumanizedHtml( $humanizationResult->getSimpleHumanization() );
