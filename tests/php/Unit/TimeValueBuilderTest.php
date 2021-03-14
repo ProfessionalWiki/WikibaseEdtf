@@ -156,4 +156,11 @@ class TimeValueBuilderTest extends TestCase {
 		);
 	}
 
+	public function testOnlyMonthSpecified(): void {
+		$this->assertSame(
+			[], // This cannot be represented with a TimeValue
+			$this->edtfToMultipleTimeValues( 'XXXX-12-XX' )
+		);
+	}
+
 }

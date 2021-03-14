@@ -27,6 +27,18 @@ class TimeValueBuilder {
 	public function edtfToTimeValues( string $edtfString ): array {
 		$edtf = $this->edtfParser->parse( $edtfString )->getEdtfValue();
 
+		try {
+			return $this->edtfValueToTimeValues( $edtf );
+		}
+		catch ( \InvalidArgumentException $ex ) {
+			return [];
+		}
+	}
+
+	/**
+	 * @return TimeValue[]
+	 */
+	private function edtfValueToTimeValues( EdtfValue $edtf ): array {
 		if ( $edtf instanceof Set ) {
 			return $this->setToTimeValues( $edtf );
 		}
@@ -64,7 +76,7 @@ class TimeValueBuilder {
 			) );
 		}
 
-		throw new \InvalidArgumentException();
+		throw new \InvalidArgumentException( 'Unsupported EdtfValue' );
 	}
 
 	private function newTimeValue( string $isoLikeTimestamp, int $timezone, int $precision ): TimeValue {
@@ -83,6 +95,10 @@ class TimeValueBuilder {
 	}
 
 	private function buildDateString( ExtDate $edtf ): string {
+		if ( $edtf->getYear() === null ) {
+			throw new \InvalidArgumentException( 'Null years are not supported by Wikibase' );
+		}
+
 		return sprintf(
 			'%s-%02d-%02d',
 			$edtf->getYear() < 0 ? $edtf->getYear() : '+' . $edtf->getYear(),
