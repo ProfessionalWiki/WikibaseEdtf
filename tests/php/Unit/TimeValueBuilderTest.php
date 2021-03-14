@@ -135,4 +135,25 @@ class TimeValueBuilderTest extends TestCase {
 		);
 	}
 
+	public function testUncertainDate(): void {
+		$this->assertEquals(
+			$this->newTimeValue( '+1984-00-00T00:00:00Z', 0, TimeValue::PRECISION_YEAR ),
+			$this->edtfToTimeValue( '1984?' )
+		);
+	}
+
+	public function testUnspecifiedDays(): void {
+		$this->assertEquals(
+			$this->newTimeValue( '+1985-04-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
+			$this->edtfToTimeValue( '1985-04-XX' )
+		);
+	}
+
+	public function testUnspecifiedMonths(): void {
+		$this->assertEquals(
+			$this->newTimeValue( '+1985-01-03T00:00:00Z', 0, TimeValue::PRECISION_DAY ),
+			$this->edtfToTimeValue( '1985-XX-03' )
+		);
+	}
+
 }

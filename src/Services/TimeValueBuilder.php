@@ -86,7 +86,7 @@ class TimeValueBuilder {
 		return sprintf(
 			'%s-%02d-%02d',
 			$edtf->getYear() < 0 ? $edtf->getYear() : '+' . $edtf->getYear(),
-			$edtf->getMonth() ?? 0,
+			$edtf->getMonth() ?? ( $edtf->getDay() === null ? 0 : 1 ),
 			$edtf->getDay() ?? 0,
 		);
 	}
