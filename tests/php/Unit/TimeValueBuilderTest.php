@@ -117,22 +117,22 @@ class TimeValueBuilderTest extends TestCase {
 		);
 	}
 
-//	public function testIntervalWithOpenStart(): void {
-//		$this->assertEquals(
-//			[
-//				$this->newTimeValue( '+2021-03-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH )
-//			],
-//			$this->edtfToMultipleTimeValues( '../2021-03' )
-//		);
-//	}
-//
-//	public function testIntervalWithOpenEnd(): void {
-//		$this->assertEquals(
-//			[
-//				$this->newTimeValue( '+2020-11-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
-//			],
-//			$this->edtfToMultipleTimeValues( '2020-11/..' )
-//		);
-//	}
+	public function testIntervalWithOpenStart(): void {
+		$this->assertEquals(
+			[
+				$this->newTimeValue( '+2021-03-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH )
+			],
+			$this->edtfToMultipleTimeValues( '../2021-03' )
+		);
+	}
+
+	public function testIntervalWithOpenEnd(): void {
+		$this->assertEquals(
+			[
+				$this->newTimeValue( '+2020-11-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
+			],
+			$this->edtfToMultipleTimeValues( '2020-11/..' )
+		);
+	}
 
 }

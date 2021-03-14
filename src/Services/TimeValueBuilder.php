@@ -134,10 +134,17 @@ class TimeValueBuilder {
 	 * @return TimeValue[]
 	 */
 	private function intervalToTimeValues( Interval $interval ): array {
-		return [
-			$this->singleValueEdtfToTimeValue( $interval->getStartDate() ),
-			$this->singleValueEdtfToTimeValue( $interval->getEndDate() )
-		];
+		$timeValues = [];
+
+		if ( $interval->hasStartDate() ) {
+			$timeValues[] = $this->singleValueEdtfToTimeValue( $interval->getStartDate() );
+		}
+
+		if ( $interval->hasEndDate() ) {
+			$timeValues[] = $this->singleValueEdtfToTimeValue( $interval->getEndDate() );
+		}
+
+		return $timeValues;
 	}
 
 }
