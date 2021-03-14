@@ -163,4 +163,11 @@ class TimeValueBuilderTest extends TestCase {
 		);
 	}
 
+	public function testInvalidEdtf(): void {
+		$this->assertSame(
+			[],
+			$this->edtfToMultipleTimeValues( '~=[,,_,,]:3' )
+		);
+	}
+
 }

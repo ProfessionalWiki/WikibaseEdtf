@@ -25,10 +25,14 @@ class TimeValueBuilder {
 	 * @return TimeValue[]
 	 */
 	public function edtfToTimeValues( string $edtfString ): array {
-		$edtf = $this->edtfParser->parse( $edtfString )->getEdtfValue();
+		$parsingResult = $this->edtfParser->parse( $edtfString );
+
+		if ( !$parsingResult->isValid() ) {
+			return [];
+		}
 
 		try {
-			return $this->edtfValueToTimeValues( $edtf );
+			return $this->edtfValueToTimeValues( $parsingResult->getEdtfValue() );
 		}
 		catch ( \InvalidArgumentException $ex ) {
 			return [];
