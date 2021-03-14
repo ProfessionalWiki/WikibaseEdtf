@@ -28,17 +28,11 @@ class TimeValueBuilder {
 		$edtf = $this->edtfParser->parse( $edtfString )->getEdtfValue();
 
 		if ( $edtf instanceof Set ) {
-			return array_map(
-				fn( EdtfValue $edtfValue ) => $this->singleValueEdtfToTimeValue( $edtfValue ),
-				$edtf->getDates()
-			);
+			return $this->setToTimeValues( $edtf );
 		}
 
 		if ( $edtf instanceof Interval ) {
-			return [
-				$this->singleValueEdtfToTimeValue( $edtf->getStartDate() ),
-				$this->singleValueEdtfToTimeValue( $edtf->getEndDate() )
-			];
+			return $this->intervalToTimeValues( $edtf );
 		}
 
 		return [
@@ -124,6 +118,26 @@ class TimeValueBuilder {
 			$edtf->getMinute(),
 			$edtf->getSecond(),
 		);
+	}
+
+	/**
+	 * @return TimeValue[]
+	 */
+	private function setToTimeValues( Set $set ): array {
+		return array_map(
+			fn( EdtfValue $edtfValue ) => $this->singleValueEdtfToTimeValue( $edtfValue ),
+			$set->getDates()
+		);
+	}
+
+	/**
+	 * @return TimeValue[]
+	 */
+	private function intervalToTimeValues( Interval $interval ): array {
+		return [
+			$this->singleValueEdtfToTimeValue( $interval->getStartDate() ),
+			$this->singleValueEdtfToTimeValue( $interval->getEndDate() )
+		];
 	}
 
 }
