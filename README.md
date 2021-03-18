@@ -9,6 +9,11 @@
 Wikibase EDTF has been made possible with the financial support of the Luxembourg Ministry of Culture.
 It is developed by [Professional.Wiki].
 
+- [Platform requirements](#platform-requirements)
+- [Installation](#installation)
+- [Running the tests](#running-the-tests)
+- [Release notes](#release-notes)
+
 ## Platform requirements
 
 * [PHP] 7.4 or later, including PHP 8.0
