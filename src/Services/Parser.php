@@ -23,8 +23,6 @@ class Parser implements ValueParser {
 	 * @return StringValue
 	 */
 	public function parse( $value ): StringValue {
-//		$edtf = $this->edtfParser->parse( 'foo' ); // TODO
-
 		return new StringValue( $value );
 	}
 

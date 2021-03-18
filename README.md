@@ -47,11 +47,16 @@ You can verify the extension was enabled successfully by opening your wikis Spec
 
 ## Release notes
 
-### Version 0.1.0
+### Version 1.0.0
 
-Under development
+Released on 2021-03-18
 
 * Initial release for MediaWiki/Wikibase 1.35
+* EDTF datatype with
+  	* Support for EDTF levels 0, 1 and 2
+	* Input validation
+	* Display of humanized and internationalized version in the reading UI
+	* RDF export (using standard Wikibase dates) for most values
 
 [Professional.Wiki]: https://professional.wiki
 [EDTF]: https://www.loc.gov/standards/datetime/
