@@ -51,6 +51,10 @@ class TimeValueBuilder {
 			return $this->intervalToTimeValues( $edtf );
 		}
 
+		if ( $edtf instanceof Season ) {
+			return $this->seasonToTimeValues( $edtf );
+		}
+
 		return [
 			$this->singleValueEdtfToTimeValue( $edtf )
 		];
@@ -71,13 +75,6 @@ class TimeValueBuilder {
 				$edtf->getTimezoneOffset() ?? 0,
 				$this->getTimePrecision( $edtf )
 			);
-		}
-
-		if ( $edtf instanceof Season ) {
-			return $this->singleValueEdtfToTimeValue( new ExtDate(
-				$edtf->getYear(),
-				1 // TODO
-			) );
 		}
 
 		throw new \InvalidArgumentException( 'Unsupported EdtfValue' );
@@ -165,6 +162,19 @@ class TimeValueBuilder {
 //		}
 
 		return $timeValues;
+	}
+
+	/**
+	 * @return TimeValue[]
+	 */
+	private function seasonToTimeValues( Season $season ): array {
+		return array_map(
+			fn( int $month ) => $this->singleValueEdtfToTimeValue( new ExtDate(
+				$season->getYear(),
+				$month
+			) ),
+			$season->getMonths()
+		);
 	}
 
 }

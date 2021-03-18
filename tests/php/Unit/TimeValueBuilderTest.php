@@ -100,13 +100,6 @@ class TimeValueBuilderTest extends TestCase {
 		);
 	}
 
-	public function testSeason(): void {
-		$this->assertEquals(
-			$this->newTimeValue( '+2021-01-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ), // TODO
-			$this->edtfToTimeValue( '2021-21' )
-		);
-	}
-
 //	public function testInterval(): void {
 //		$this->assertEquals(
 //			[
@@ -167,6 +160,17 @@ class TimeValueBuilderTest extends TestCase {
 		$this->assertSame(
 			[],
 			$this->edtfToMultipleTimeValues( '~=[,,_,,]:3' )
+		);
+	}
+
+	public function testSeason(): void {
+		$this->assertEquals(
+			[
+				$this->newTimeValue( '+2021-03-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
+				$this->newTimeValue( '+2021-04-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
+				$this->newTimeValue( '+2021-05-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
+			],
+			$this->edtfToMultipleTimeValues( '2021-21' )
 		);
 	}
 
