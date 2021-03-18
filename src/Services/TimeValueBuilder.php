@@ -141,9 +141,11 @@ class TimeValueBuilder {
 	 * @return TimeValue[]
 	 */
 	private function setToTimeValues( Set $set ): array {
-		return array_map(
-			fn( EdtfValue $edtfValue ) => $this->singleValueEdtfToTimeValue( $edtfValue ),
-			$set->getDates()
+		return array_merge(
+			...array_map(
+				fn( EdtfValue $edtfValue ) => $this->edtfValueToTimeValues( $edtfValue ),
+				$set->getDates()
+			)
 		);
 	}
 

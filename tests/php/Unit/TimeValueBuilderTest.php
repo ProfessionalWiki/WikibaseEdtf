@@ -174,4 +174,18 @@ class TimeValueBuilderTest extends TestCase {
 		);
 	}
 
+	public function testSetWithMultiDates(): void {
+		$this->assertEquals(
+			[
+				$this->newTimeValue( '+2021-03-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
+				$this->newTimeValue( '+2021-04-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
+				$this->newTimeValue( '+2021-05-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
+				$this->newTimeValue( '+2021-09-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
+				$this->newTimeValue( '+2021-10-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
+				$this->newTimeValue( '+2021-11-00T00:00:00Z', 0, TimeValue::PRECISION_MONTH ),
+			],
+			$this->edtfToMultipleTimeValues( '[2021-21,2021-23]' )
+		);
+	}
+
 }
