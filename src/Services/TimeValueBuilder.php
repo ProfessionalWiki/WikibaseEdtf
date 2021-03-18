@@ -156,13 +156,13 @@ class TimeValueBuilder {
 	private function intervalToTimeValues( Interval $interval ): array {
 		$timeValues = [];
 
-		if ( $interval->hasStartDate() ) {
-			$timeValues[] = $this->singleValueEdtfToTimeValue( $interval->getStartDate() );
-		}
-
-		if ( $interval->hasEndDate() ) {
-			$timeValues[] = $this->singleValueEdtfToTimeValue( $interval->getEndDate() );
-		}
+//		if ( $interval->hasStartDate() ) {
+//			$timeValues[] = $this->singleValueEdtfToTimeValue( $interval->getStartDate() );
+//		}
+//
+//		if ( $interval->hasEndDate() ) {
+//			$timeValues[] = $this->singleValueEdtfToTimeValue( $interval->getEndDate() );
+//		}
 
 		return $timeValues;
 	}
