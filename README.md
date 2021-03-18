@@ -47,9 +47,7 @@ You can verify the extension was enabled successfully by opening your wikis Spec
 
 ## Release notes
 
-### Version 1.0.0
-
-Released on 2021-03-18
+### Version 1.0.0 - 2021-03-19
 
 * Initial release for MediaWiki/Wikibase 1.35
 * EDTF datatype with
