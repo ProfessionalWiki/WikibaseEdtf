@@ -49,7 +49,7 @@ class WikibaseEdtf {
 			case SnakFormatter::FORMAT_HTML:
 				return new HumanizingHtmlFormatter(
 					EdtfFactory::newParser(),
-					EdtfFactory::newStructuredHumanizerForLanguage( $options->getOption( 'lang' ) )
+					EdtfFactory::newStructuredHumanizerForLanguage( $options->getOption( 'lang' ), 'en' )
 				);
 			case SnakFormatter::FORMAT_WIKI:
 			default:
