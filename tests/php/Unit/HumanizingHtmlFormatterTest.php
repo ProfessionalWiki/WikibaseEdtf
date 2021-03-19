@@ -63,4 +63,11 @@ class HumanizingHtmlFormatterTest extends TestCase {
 		);
 	}
 
+	public function testYearZeroInSet() {
+		$this->assertSame(
+			'<div class="edtf-value"><span class="edtf-plain">[-1, 0, 1]</span><br><span class="edtf-humanized">(One of these: Year 1 BC, Year 0, Year 1)</span></div>',
+			$this->newFormatter()->format( new StringValue( '[-1, 0, 1]' ) )
+		);
+	}
+
 }
