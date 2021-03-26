@@ -3,11 +3,12 @@
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ProfessionalWiki/WikibaseEdtf/CI/master)](https://github.com/ProfessionalWiki/WikibaseEdtf/actions?query=workflow%3ACI)
 [![Latest Stable Version](https://poser.pugx.org/professional-wiki/wikibase-edtf/version.png)](https://packagist.org/packages/professional-wiki/wikibase-edtf)
 [![Download count](https://poser.pugx.org/professional-wiki/wikibase-edtf/d/total.png)](https://packagist.org/packages/professional-wiki/wikibase-edtf)
+[![License](https://img.shields.io/packagist/l/professional-wiki/wikibase-edtf)](LICENSE)
 
 [MediaWiki] extension that adds support for the [Extended Date/Time Format (EDTF) Specification][EDTF] to [Wikibase] via a new data type.
 
 Wikibase EDTF has been made possible with the financial support of the Luxembourg Ministry of Culture.
-It is developed by [Professional.Wiki].
+It an open source project developed and maintained by [Professional.Wiki]. Contributions are welcome!
 
 - [Platform requirements](#platform-requirements)
 - [Installation](#installation)
