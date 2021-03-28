@@ -59,6 +59,10 @@ class RdfBuilderTest extends TestCase {
 			[
 				'<http://www/Q1> '
 					. '<http://acme/statement/P7> '
+					. '"[2021-03-28]"^^<http://www.w3.org/2001/XMLSchema#edtf> .',
+
+				'<http://www/Q1> '
+					. '<http://acme/statement/P7> '
 					. '"2021-03-28T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .',
 
 				'<http://www/Q1> '

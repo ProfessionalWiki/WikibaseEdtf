@@ -25,10 +25,13 @@ class RdfBuilder implements ValueSnakRdfBuilder {
 	 * @param string $propertyValueNamespace Property value relation namespace
 	 * @param string $propertyValueLName Property value relation name
 	 * @param string $dataType Property data type
-	 * @param PropertyValueSnak $snak
+	 * @param PropertyValueSnak $edtfSnak
 	 */
-	public function addValue( RdfWriter $writer, $propertyValueNamespace, $propertyValueLName, $dataType, $snakNamespace, PropertyValueSnak $snak ) {
-		foreach ( $this->edtfSnakToTimeSnaks( $snak ) as $timeValueSnak ) {
+	public function addValue( RdfWriter $writer, $propertyValueNamespace, $propertyValueLName, $dataType, $snakNamespace, PropertyValueSnak $edtfSnak ) {
+		$writer->say( $propertyValueNamespace, $propertyValueLName )
+			->value( $edtfSnak->getDataValue()->getValue(), 'xsd', 'edtf' );
+
+		foreach ( $this->edtfSnakToTimeSnaks( $edtfSnak ) as $timeValueSnak ) {
 			$this->timeRdfBuilder->addValue(
 				$writer,
 				$propertyValueNamespace,
