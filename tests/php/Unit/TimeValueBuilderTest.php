@@ -36,7 +36,7 @@ class TimeValueBuilderTest extends TestCase {
 			0, // Gets discarded
 			0, // Gets discarded
 			$precision,
-			TimeValue::CALENDAR_GREGORIAN // Gets discarded
+			TimeValue::CALENDAR_GREGORIAN
 		);
 	}
 

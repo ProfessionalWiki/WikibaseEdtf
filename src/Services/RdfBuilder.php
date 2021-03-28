@@ -10,7 +10,6 @@ use Wikibase\Repo\Rdf\Values\TimeRdfBuilder;
 use Wikibase\Repo\Rdf\ValueSnakRdfBuilder;
 use Wikimedia\Purtle\RdfWriter;
 
-// TODO: single integration test
 class RdfBuilder implements ValueSnakRdfBuilder {
 
 	private TimeRdfBuilder $timeRdfBuilder;
