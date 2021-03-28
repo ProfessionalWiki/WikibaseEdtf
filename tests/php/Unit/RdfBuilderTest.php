@@ -6,6 +6,7 @@ namespace Wikibase\EDTF\Tests\Unit;
 
 use DataValues\StringValue;
 use EDTF\EdtfFactory;
+use MediaWiki\MediaWikiServices;
 use PHPUnit\Framework\TestCase;
 use Wikibase\DataAccess\EntitySourceDefinitions;
 use Wikibase\DataModel\Entity\PropertyId;
@@ -31,6 +32,10 @@ class RdfBuilderTest extends TestCase {
 	private NTriplesRdfTestHelper $helper;
 
 	protected function setUp(): void {
+		if ( version_compare( MW_VERSION, '1.36', '>=' ) ) {
+			$this->markTestSkipped( 'Only works with Wikibase 1.35' );
+		}
+
 		parent::setUp();
 
 		$this->helper = new NTriplesRdfTestHelper();
@@ -108,7 +113,7 @@ class RdfBuilderTest extends TestCase {
 			[ '' => 'http://acme.com/item/' ],
 			[ '' => 'http://acme.com/data/' ],
 			new EntitySourceDefinitions( [], new EntityTypeDefinitions( [] ) ),
-			'',
+			'', // Changed to array in WB 1.36
 			[ '' => '' ],
 			[ '' => '' ]
 		);
