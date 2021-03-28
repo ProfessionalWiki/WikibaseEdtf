@@ -38,7 +38,7 @@ class RdfBuilderTest extends TestCase {
 
 	public function testAddValue(): void {
 		$propertyId = new PropertyId( 'P7' );
-		$value = new StringValue( '2021-03-28' );
+		$value = new StringValue( '[2021-03-28]' );
 
 		$vocabulary = $this->newVocabulary();
 		$snakWriter = $this->newSnakWriter();
@@ -60,21 +60,27 @@ class RdfBuilderTest extends TestCase {
 				'<http://www/Q1> '
 					. '<http://acme/statement/P7> '
 					. '"2021-03-28T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .',
+
 				'<http://www/Q1> '
 					. '<http://acme/statement/value/P7> '
 					. '<http://acme/value/92c2b19606046ddabd6e671d630e37b9> .',
+
 				'<http://acme/value/92c2b19606046ddabd6e671d630e37b9> '
 					. '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> '
 					. '<http://acme/onto/TimeValue> .',
+
 				'<http://acme/value/92c2b19606046ddabd6e671d630e37b9> '
 					. '<http://acme/onto/timeValue> '
 					. '"2021-03-28T00:00:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .',
+
 				'<http://acme/value/92c2b19606046ddabd6e671d630e37b9> '
 					. '<http://acme/onto/timePrecision> '
 					. '"11"^^<http://www.w3.org/2001/XMLSchema#integer> .',
+
 				'<http://acme/value/92c2b19606046ddabd6e671d630e37b9> '
 					. '<http://acme/onto/timeTimezone> '
 					. '"0"^^<http://www.w3.org/2001/XMLSchema#integer> .',
+
 				'<http://acme/value/92c2b19606046ddabd6e671d630e37b9> '
 					. '<http://acme/onto/timeCalendarModel> '
 					. '<http://www.wikidata.org/entity/Q1985727> .',
