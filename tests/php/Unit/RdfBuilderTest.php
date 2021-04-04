@@ -6,7 +6,6 @@ namespace Wikibase\EDTF\Tests\Unit;
 
 use DataValues\StringValue;
 use EDTF\EdtfFactory;
-use MediaWiki\MediaWikiServices;
 use PHPUnit\Framework\TestCase;
 use Wikibase\DataAccess\EntitySourceDefinitions;
 use Wikibase\DataModel\Entity\PropertyId;

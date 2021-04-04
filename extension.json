@@ -2,13 +2,13 @@
 	"name": "Wikibase EDTF",
 	"type": "wikibase",
 
-	"version": "1.0.0",
+	"version": "1.1.0",
 
 	"author": [
 		"[https://www.EntropyWins.wtf/mediawiki Jeroen De Dauw]",
 		"[https://Professional.Wiki/ Professional.Wiki]"
 	],
-	
+
 	"license-name": "GPL-2.0-or-later",
 
 	"url": "https://github.com/ProfessionalWiki/WikibaseEdtf",
