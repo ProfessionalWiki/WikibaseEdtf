@@ -19,9 +19,9 @@ It an open source project developed and maintained by [Professional.Wiki]. Contr
 
 ## Platform requirements
 
-* [PHP] 7.4 or later, including PHP 8.0
-* [MediaWiki] 1.35.x
-* [Wikibase Repository] REL1_35
+* [PHP] 7.4 or later, including PHP 8.x
+* [MediaWiki] 1.35.x (1.36.x probably also works)
+* [Wikibase Repository] REL1_35 (REL1_36 probably also works)
 
 See the [release notes](#release-notes) for more information on the different versions of this extension.
 
