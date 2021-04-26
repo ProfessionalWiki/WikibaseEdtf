@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - mw: 'master'
+          - mw: 'REL1_36'
             php: 7.4
           - mw: 'REL1_35'
             php: 7.4
