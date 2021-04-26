@@ -15,6 +15,8 @@ It an open source project developed and maintained by [Professional.Wiki]. Contr
 - [Running the tests](#running-the-tests)
 - [Release notes](#release-notes)
 
+<a href="https://www.youtube.com/watch?v=U5ndjtuDPf8"><img src=".github/youtube.png" width="430px" title="Play video" /></a>
+
 ## Platform requirements
 
 * [PHP] 7.4 or later, including PHP 8.0
@@ -59,7 +61,7 @@ You can verify the extension was enabled successfully by opening your wikis Spec
 
 ### Version 1.0.0 - 2021-03-19
 
-* Initial release for MediaWiki/Wikibase 1.35
+* Initial release for MediaWiki/Wikibase 1.35 ([Release announcement], [Demo video])
 * EDTF datatype with
   	* Support for EDTF levels 0, 1 and 2
 	* Input validation
@@ -74,3 +76,5 @@ You can verify the extension was enabled successfully by opening your wikis Spec
 [Wikibase Repository]: https://www.mediawiki.org/wiki/Extension:Wikibase_Repository
 [Composer]: https://getcomposer.org
 [Composer install]: https://professional.wiki/en/articles/installing-mediawiki-extensions-with-composer
+[Release announcement]: https://wikibase.consulting/wikibase-edtf/
+[Demo video]: https://www.youtube.com/watch?v=U5ndjtuDPf8
