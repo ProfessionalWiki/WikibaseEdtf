@@ -57,6 +57,12 @@ You can verify the extension was enabled successfully by opening your wiki's "Sp
 
 ## Release notes
 
+### Version 1.2.0 - 2021-04-28
+
+* Improved humanization of sets
+* Improved validation of intervals and sets
+* Fixed DoS vector
+
 ### Version 1.1.0 - 2021-04-04
 
 * Added plain EDTF value to RDF output

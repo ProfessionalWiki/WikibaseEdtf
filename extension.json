@@ -2,7 +2,7 @@
 	"name": "Wikibase EDTF",
 	"type": "wikibase",
 
-	"version": "1.1.0",
+	"version": "1.2.0",
 
 	"author": [
 		"[https://www.EntropyWins.wtf/mediawiki Jeroen De Dauw]",
