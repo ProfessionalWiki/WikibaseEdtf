@@ -10,14 +10,17 @@
 Wikibase EDTF has been made possible with the financial support of the Luxembourg Ministry of Culture.
 It an open source project developed and maintained by [Professional.Wiki]. Contributions are welcome!
 
-- [RDF export](#rdf-export)
+- [Usage](#usage)
+	- [RDF export](#rdf-export)
 - [Installation](#installation)
 - [Running the tests](#running-the-tests)
 - [Release notes](#release-notes)
 
+## Usage
+
 <a href="https://www.youtube.com/watch?v=U5ndjtuDPf8"><img src=".github/youtube.png" width="430px" title="Play video" /></a>
 
-## RDF export
+### RDF export
 
 Wikibase EDTF turns EDTF values into standard Wikibase time values that are then given to the native RDF export mechanism. Because Wikibase time values are a lot less expressive, the EDTF values are simplified in this process.
 
