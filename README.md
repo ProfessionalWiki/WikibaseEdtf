@@ -10,22 +10,33 @@
 Wikibase EDTF has been made possible with the financial support of the Luxembourg Ministry of Culture.
 It an open source project developed and maintained by [Professional.Wiki]. Contributions are welcome!
 
-- [Platform requirements](#platform-requirements)
+- [RDF export](#rdf-export)
 - [Installation](#installation)
 - [Running the tests](#running-the-tests)
 - [Release notes](#release-notes)
 
 <a href="https://www.youtube.com/watch?v=U5ndjtuDPf8"><img src=".github/youtube.png" width="430px" title="Play video" /></a>
 
-## Platform requirements
+## RDF export
+
+Wikibase EDTF turns EDTF values into standard Wikibase time values that are then given to the native RDF export mechanism. Because Wikibase time values are a lot less expressive, the EDTF values are simplified in this process.
+
+* `Single EDTF dates or times`: result in one exported value. Precision and time zones are retained. Qualifications and unspecified digits are discarded. 
+* `EDTF Season`: one date for each month is exported, each having month precision
+* `EDTF Set`: each date in the set is exported
+* `EDTF Interval`: nothing is exported (since there does not seem to be a reasonable default)
+
+For cases where multiple dates are put in the RDF export, like with seasons and sets, there is nothing in the RDF indicating these values logically belong together.
+
+## Installation
+
+Platform requirements:
 
 * [PHP] 7.4 or later, including PHP 8.x
 * [MediaWiki] 1.35.x (1.36.x probably also works)
 * [Wikibase Repository] REL1_35 (REL1_36 probably also works)
 
 See the [release notes](#release-notes) for more information on the different versions of this extension.
-
-## Installation
 
 First install MediaWiki and Wikibase Repository.
 
