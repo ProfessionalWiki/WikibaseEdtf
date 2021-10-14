@@ -24,10 +24,10 @@ It an open source project developed and maintained by [Professional.Wiki]. Contr
 
 Wikibase EDTF turns EDTF values into standard Wikibase time values that are then given to the native RDF export mechanism. Because Wikibase time values are a lot less expressive, the EDTF values are simplified in this process.
 
-* `Single EDTF dates or times`: One exported value. Precision and time zones are retained. Qualifications and unspecified digits are dropped. 
-* `EDTF Season`: one date for each month is exported, each having month precision
-* `EDTF Set`: each date in the set is exported
-* `EDTF Interval`: nothing is exported (since there does not seem to be a reasonable default)
+* `Single EDTF dates or times`: Precision and time zone are retained. Qualifications and unspecified digits are discarded. 
+* `EDTF Season`: One date for each month is exported, each having month precision.
+* `EDTF Set`: Each date in the set is exported.
+* `EDTF Interval`: Nothing is exported (since there does not seem to be a reasonable default).
 
 For cases where multiple dates are put in the RDF export, like with seasons and sets, there is nothing in the RDF indicating these values logically belong together.
 
