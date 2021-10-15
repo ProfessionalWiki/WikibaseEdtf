@@ -31,6 +31,8 @@ Wikibase EDTF turns EDTF values into standard Wikibase time values that are then
 
 For cases where multiple dates are put in the RDF export, like with seasons and sets, there is nothing in the RDF indicating these values logically belong together.
 
+If you can read PHP, you can see the simplification code in [TimeValueBuilder.php](src/Services/TimeValueBuilder.php).
+
 ## Installation
 
 Platform requirements:
