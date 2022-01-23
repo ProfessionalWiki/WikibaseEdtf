@@ -26,6 +26,8 @@ echo 'require_once __DIR__ . "/extensions/Wikibase/repo/ExampleSettings.php";' >
 echo "wfLoadExtension( 'WikibaseClient', __DIR__ . '/extensions/Wikibase/extension-client.json' );" >> LocalSettings.php
 echo 'require_once __DIR__ . "/extensions/Wikibase/client/ExampleSettings.php";' >> LocalSettings.php
 
+echo 'wfLoadExtension( "'$EXTENSION_NAME'" );' >> LocalSettings.php
+
 cat <<EOT >> composer.local.json
 {
   "require": {
