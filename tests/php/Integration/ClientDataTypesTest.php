@@ -29,7 +29,7 @@ class ClientDataTypesTest extends TestCase {
 	public function testTypeIsRegistered() {
 		$this->assertContains(
 			'edtf',
-			WikibaseClient::getDefaultInstance()->getDataTypeFactory()->getTypeIds()
+			WikibaseClient::getDataTypeFactory()->getTypeIds()
 		);
 	}
 

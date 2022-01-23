@@ -16,10 +16,10 @@ jobs:
     strategy:
       matrix:
         include:
-          - mw: 'REL1_36'
+          - mw: 'REL1_37'
             php: 7.4
-          - mw: 'REL1_35'
-            php: 7.4
+          - mw: 'REL1_37'
+            php: 8.0
 
     runs-on: ubuntu-latest
 
@@ -69,7 +69,7 @@ jobs:
         run: composer update
 
       - name: Initialize Wikibase git submodules
-        run: ( cd extensions/Wikibase ; git submodule update --init --recursive )
+        run: cd extensions/Wikibase ; git submodule update --init --recursive
 
       - name: Run PHPUnit
         run: php tests/phpunit/phpunit.php -c extensions/WikibaseEdtf/

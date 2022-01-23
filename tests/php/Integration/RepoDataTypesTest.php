@@ -41,7 +41,7 @@ class RepoDataTypesTest extends TestCase {
 	}
 
 	private function getRepoTypeDefinitions(): DataTypeDefinitions {
-		return WikibaseRepo::getDefaultInstance()->getDataTypeDefinitions();
+		return WikibaseRepo::getDataTypeDefinitions();
 	}
 
 	public function testValidatorIsRegisteredInTypeDefinitions() {
@@ -54,7 +54,7 @@ class RepoDataTypesTest extends TestCase {
 	public function testParsing() {
 		$this->assertEquals(
 			new StringValue( self::VALID_DATE_AND_TIME ),
-			WikibaseRepo::getDefaultInstance()->getValueParserFactory()->newParser(
+			WikibaseRepo::getValueParserFactory()->newParser(
 				'edtf',
 				new ParserOptions()
 			)->parse( self::VALID_DATE_AND_TIME )
@@ -64,7 +64,7 @@ class RepoDataTypesTest extends TestCase {
 	public function testFormatting() {
 		$this->assertEquals(
 			self::VALID_DATE_AND_TIME,
-			WikibaseRepo::getDefaultInstance()->getValueFormatterFactory()->getValueFormatter(
+			WikibaseRepo::getValueFormatterFactory()->getValueFormatter(
 				SnakFormatter::FORMAT_PLAIN,
 				new FormatterOptions()
 			)->formatValue( new StringValue( self::VALID_DATE_AND_TIME ), 'edtf' )
@@ -74,7 +74,7 @@ class RepoDataTypesTest extends TestCase {
 	public function testValidatorIsRegisteredInValidatorFactory() {
 		$this->assertInstanceOf(
 			Validator::class,
-			WikibaseRepo::getDefaultInstance()->getDataTypeValidatorFactory()->getValidators( 'edtf' )[0]
+			WikibaseRepo::getDataTypeValidatorFactory()->getValidators( 'edtf' )[0]
 		);
 	}
 

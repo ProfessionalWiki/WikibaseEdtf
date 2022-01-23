@@ -8,7 +8,7 @@
 [MediaWiki] extension that adds support for the [Extended Date/Time Format (EDTF) Specification][EDTF] to [Wikibase] via a new data type.
 
 Wikibase EDTF has been made possible with the financial support of the Luxembourg Ministry of Culture.
-It an open source project developed and maintained by [Professional.Wiki]. Contributions are welcome!
+It is an open source project developed and maintained by [Professional.Wiki]. Contributions are welcome!
 
 - [Usage](#usage)
 	- [RDF export](#rdf-export)
@@ -24,7 +24,7 @@ It an open source project developed and maintained by [Professional.Wiki]. Contr
 
 Wikibase EDTF turns EDTF values into standard Wikibase time values that are then given to the native RDF export mechanism. Because Wikibase time values are a lot less expressive, the EDTF values are simplified in this process.
 
-* `EDTF date or time`: Precision and time zone are retained. Qualifications and unspecified digits are discarded. 
+* `EDTF date or time`: Precision and time zone are retained. Qualifications and unspecified digits are discarded.
 * `EDTF Set`: Each date in the set is exported.
 * `EDTF Season`: One date for each month is exported, each having month precision.
 * `EDTF Interval`: Nothing is exported (since there does not seem to be a reasonable default).
@@ -38,8 +38,8 @@ If you can read PHP, you can see the simplification code in [TimeValueBuilder.ph
 Platform requirements:
 
 * [PHP] 7.4 or later, including PHP 8.x
-* [MediaWiki] 1.35.x or 1.36.x
-* [Wikibase Repository] REL1_35 or REL1_36
+* [MediaWiki] 1.35.x, 1.36.x or 1.37.x
+* [Wikibase Repository] REL1_35, REL1_36 or REL1_37
 
 See the [release notes](#release-notes) for more information on the different versions of this extension.
 
@@ -51,7 +51,7 @@ The recommended way to install Wikibase EDTF is using [Composer] with
 On the commandline, go to your wikis root directory. Then run these two commands:
 
 ```shell script
-COMPOSER=composer.local.json composer require --no-update professional-wiki/wikibase-edtf:*
+COMPOSER=composer.local.json composer require --no-update professional-wiki/wikibase-edtf:^1.2.0
 ```
 ```shell script
 composer update professional-wiki/wikibase-edtf --no-dev -o
@@ -72,6 +72,11 @@ You can verify the extension was enabled successfully by opening your wiki's "Sp
 * PHP tests: `php tests/phpunit/phpunit.php -c extensions/WikibaseEdtf/`
 
 ## Release notes
+
+### Version 1.3.0 - 2022-01-23
+
+* Added support for MediaWiki and Wikibase 1.37
+* Raised minimum MediaWiki and Wikibase versions to 1.37
 
 ### Version 1.2.0 - 2021-04-28
 
