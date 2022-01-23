@@ -38,8 +38,8 @@ If you can read PHP, you can see the simplification code in [TimeValueBuilder.ph
 Platform requirements:
 
 * [PHP] 7.4 or later, including PHP 8.x
-* [MediaWiki] 1.35.x or 1.36.x
-* [Wikibase Repository] REL1_35 or REL1_36
+* [MediaWiki] 1.35.x, 1.36.x or 1.37.x
+* [Wikibase Repository] REL1_35, REL1_36 or REL1_37
 
 See the [release notes](#release-notes) for more information on the different versions of this extension.
 
@@ -72,6 +72,10 @@ You can verify the extension was enabled successfully by opening your wiki's "Sp
 * PHP tests: `php tests/phpunit/phpunit.php -c extensions/WikibaseEdtf/`
 
 ## Release notes
+
+### Version 1.3.0 - 2022-01-23
+
+* Added support for MediaWiki and Wikibase 1.37
 
 ### Version 1.2.0 - 2021-04-28
 
