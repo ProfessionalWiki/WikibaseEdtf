@@ -8,7 +8,7 @@
 [MediaWiki] extension that adds support for the [Extended Date/Time Format (EDTF) Specification][EDTF] to [Wikibase] via a new data type.
 
 Wikibase EDTF has been made possible with the financial support of the Luxembourg Ministry of Culture.
-It an open source project developed and maintained by [Professional.Wiki]. Contributions are welcome!
+It is an open source project developed and maintained by [Professional.Wiki]. Contributions are welcome!
 
 - [Usage](#usage)
 	- [RDF export](#rdf-export)
@@ -24,7 +24,7 @@ It an open source project developed and maintained by [Professional.Wiki]. Contr
 
 Wikibase EDTF turns EDTF values into standard Wikibase time values that are then given to the native RDF export mechanism. Because Wikibase time values are a lot less expressive, the EDTF values are simplified in this process.
 
-* `EDTF date or time`: Precision and time zone are retained. Qualifications and unspecified digits are discarded. 
+* `EDTF date or time`: Precision and time zone are retained. Qualifications and unspecified digits are discarded.
 * `EDTF Set`: Each date in the set is exported.
 * `EDTF Season`: One date for each month is exported, each having month precision.
 * `EDTF Interval`: Nothing is exported (since there does not seem to be a reasonable default).
