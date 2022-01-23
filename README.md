@@ -51,7 +51,7 @@ The recommended way to install Wikibase EDTF is using [Composer] with
 On the commandline, go to your wikis root directory. Then run these two commands:
 
 ```shell script
-COMPOSER=composer.local.json composer require --no-update professional-wiki/wikibase-edtf:*
+COMPOSER=composer.local.json composer require --no-update professional-wiki/wikibase-edtf:^1.2.0
 ```
 ```shell script
 composer update professional-wiki/wikibase-edtf --no-dev -o
@@ -76,6 +76,7 @@ You can verify the extension was enabled successfully by opening your wiki's "Sp
 ### Version 1.3.0 - 2022-01-23
 
 * Added support for MediaWiki and Wikibase 1.37
+* Raised minimum MediaWiki and Wikibase versions to 1.37
 
 ### Version 1.2.0 - 2021-04-28
 
