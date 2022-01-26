@@ -10,6 +10,8 @@
 Wikibase EDTF has been made possible with the financial support of the Luxembourg Ministry of Culture.
 It is an open source project developed and maintained by [Professional.Wiki]. Contributions are welcome!
 
+You can find a demo of this extension at https://edtf.wikibase.wiki
+
 - [Usage](#usage)
 	- [RDF export](#rdf-export)
 - [Installation](#installation)
