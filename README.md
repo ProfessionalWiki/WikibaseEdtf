@@ -77,6 +77,10 @@ You can verify the extension was enabled successfully by opening your wiki's "Sp
 
 ## Release notes
 
+### Version 2.0.1 - 2022-03-26
+
+* Added missing messages for Special:ListDatatypes
+
 ### Version 2.0.0 - 2022-01-23
 
 * Added support for MediaWiki and Wikibase 1.37
