@@ -1,13 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Kghbln"
-        ]
-    },
-    "wbedtf-name": "{{notranslate}}",
-    "wbedtf-desc": "{{Desc|name=Wikibase EDTF|url=https://github.com/ProfessionalWiki/WikibaseEdtf}}",
-
-    "datatypes-type-edtf": "Name of the datatype",
-    "wikibase-listdatatypes-edtf-head": "Name of the datatype used as header on Special:ListDatatypes. Translation should match {{Msg-mw|datatypes-type-edtf}}.",
-    "wikibase-listdatatypes-edtf-body": "Description of the datatype on Special:ListDatatypes"
+	"@metadata": {
+		"authors": [
+			"Kghbln"
+		]
+	},
+	"wbedtf-name": "{{notranslate}}",
+	"wbedtf-desc": "{{Desc|name=Wikibase EDTF|url=https://github.com/ProfessionalWiki/WikibaseEdtf}}",
+	"datatypes-type-edtf": "Name of the datatype. Translation should match {{Msg-mw|Wikibase-listdatatypes-edtf-head}}.",
+	"wikibase-listdatatypes-edtf-head": "Name of the datatype used as header on Special:ListDatatypes. Translation should match {{Msg-mw|Datatypes-type-edtf}}.",
+	"wikibase-listdatatypes-edtf-body": "Description of the datatype on Special:ListDatatypes"
 }
