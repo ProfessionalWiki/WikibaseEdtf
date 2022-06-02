@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hedda"
+		]
+	},
+	"wbedtf-desc": "Özel bir veri türü aracılığıyla Wikibase'e EDTF standardı desteği ekler",
+	"datatypes-type-edtf": "EDTF Tarih/Zaman",
+	"wikibase-listdatatypes-edtf-head": "EDTF Tarih/Zaman",
+	"wikibase-listdatatypes-edtf-body": "<p>[https://www.loc.gov/standards/datetime/ Genişletilmiş Tarih/Zaman Formatı (Extended Date/Time Format, EDTF)] biçiminde bir tarih veya zaman.</p><p>Bu biçim kullanılabilir çünkü [https://github.com/ProfessionalWiki/WikibaseEdtf Wikibase EDTF eklentisi] etkinleştirilmiştir. Eklentinin [https://github.com/ProfessionalWiki/WikibaseEdtf#wikibase-edtf belgeleme sayfasına] bakarak kullanım hakkında daha fazla bilgi elde edebilirsiniz.</p>"
+}
