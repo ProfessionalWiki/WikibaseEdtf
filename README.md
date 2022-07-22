@@ -24,7 +24,9 @@ You can find a demo of this extension at https://edtf.wikibase.wiki
 
 ### RDF export
 
-Wikibase EDTF turns EDTF values into standard Wikibase time values that are then given to the native RDF export mechanism. Because Wikibase time values are a lot less expressive, the EDTF values are simplified in this process.
+Wikibase EDTF is exposed to the native RDF export mechanism with the xsd:EDTF datatype. e.g. "1867-05-26"^^xsd:edtf 
+
+Wikibase EDTF also turns EDTF values into standard Wikibase time (xsd:dateTime) values that are then given to the native RDF export mechanism. Because Wikibase time values are a lot less expressive, the EDTF values are simplified in this process.
 
 * `EDTF date or time`: Precision and time zone are retained. Qualifications and unspecified digits are discarded.
 * `EDTF Set`: Each date in the set is exported.
@@ -34,6 +36,16 @@ Wikibase EDTF turns EDTF values into standard Wikibase time values that are then
 For cases where multiple dates are put in the RDF export, like with seasons and sets, there is nothing in the RDF indicating these values logically belong together.
 
 If you can read PHP, you can see the simplification code in [TimeValueBuilder.php](src/Services/TimeValueBuilder.php).
+
+## apparant duplicate results using SPARQL / Blazegraph
+Because EDTF exposes the values as both xsd:edtf and a dumbed down xsd:dateTime you will get two values when querying properties with this datatype. using a filter in your SPARQL query can remove the value that you are not interested in:
+
+```
+FILTER ( datatype(?date) = xsd:edtf ) #removes the raw EDTF string from the query results, in this case ?date
+
+FILTER ( datatype(?date) = xsd:dateTime ) #removes the dumbed down EDTF strings from the query results, in this case ?date
+```
+note that if you are using OPTIONAL on the property, then you need to move the FILTER within the OPTIONAL statement.
 
 ## Installation
 
