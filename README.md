@@ -24,9 +24,7 @@ You can find a demo of this extension at https://edtf.wikibase.wiki
 
 ### RDF export
 
-Wikibase EDTF is exposed to the native RDF export mechanism with the xsd:EDTF datatype. e.g. "1867-05-26"^^xsd:edtf 
-
-Wikibase EDTF also turns EDTF values into standard Wikibase time (xsd:dateTime) values that are then given to the native RDF export mechanism. Because Wikibase time values are a lot less expressive, the EDTF values are simplified in this process.
+Wikibase EDTF gives its value to the native RDF export mechanism using the datatypes xsd:EDTF datatype (e.g. "1867-05-26"^^xsd:edtf) and xsd:dateTime. For the latter datatype it turns EDTF values into standard Wikibase time (xsd:dateTime) values. Because Wikibase time values are a lot less expressive, the EDTF values are simplified in this process:
 
 * `EDTF date or time`: Precision and time zone are retained. Qualifications and unspecified digits are discarded.
 * `EDTF Set`: Each date in the set is exported.
