@@ -39,9 +39,9 @@ If you can read PHP, you can see the simplification code in [TimeValueBuilder.ph
 Because EDTF exposes the values as both xsd:edtf and a dumbed down xsd:dateTime you will get two values when querying properties with this datatype. using a filter in your SPARQL query can remove the value that you are not interested in:
 
 ```
-FILTER ( datatype(?date) = xsd:edtf ) #removes the raw EDTF string from the query results, in this case ?date
+FILTER ( datatype(?date) = xsd:edtf ) #shows only the raw EDTF string from the query results, in this case ?date
 
-FILTER ( datatype(?date) = xsd:dateTime ) #removes the dumbed down EDTF strings from the query results, in this case ?date
+FILTER ( datatype(?date) = xsd:dateTime ) #shows only the dumbed down EDTF strings from the query results, in this case ?date
 ```
 note that if you are using OPTIONAL on the property, then you need to move the FILTER within the OPTIONAL statement.
 
