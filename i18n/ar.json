@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Meno25"
+		]
+	},
+	"wbedtf-desc": "يضيف دعمًا لمعيار EDTF إلى قاعدة Wikibase عبر نوع بيانات مخصص",
+	"datatypes-type-edtf": "تاريخ / وقت EDTF",
+	"wikibase-listdatatypes-edtf-head": "تاريخ / وقت EDTF",
+	"wikibase-listdatatypes-edtf-body": "<p style=\";text-align:right;direction:rtl\">تاريخ أو وقت بتنسيق [https://www.loc.gov/standards/datetime/ Extended Date / Time Format (EDTF)].</p><p style=\";text-align:right;direction:rtl\"> هذا التنسيق متاح لأنه تم تمكين [https://github.com/ProfessionalWiki/WikibaseEdtf Wikibase EDTF extension]. راجع [https://github.com/ProfessionalWiki/WikibaseEdtf#wikibase-edtf وثائق] للحصول على مزيد من المعلومات حول الاستخدام.</p>"
+}
