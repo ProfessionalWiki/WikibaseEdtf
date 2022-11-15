@@ -7,8 +7,9 @@
 
 [MediaWiki] extension that adds support for the [Extended Date/Time Format (EDTF) Specification][EDTF] to [Wikibase] via a new data type.
 
-Wikibase EDTF has been made possible with the financial support of the Luxembourg Ministry of Culture.
-It is an open source project developed and maintained by [Professional.Wiki]. Contributions are welcome!
+[Professional.Wiki] created and maintains Wikibase EDTF. We provide [Wikibase hosting], [Wikibase development] and [Wikibase consulting].
+
+Wikibase EDTF is an open source project that was made possible with the financial support of the Luxembourg Ministry of Culture. Contributions are welcome!
 
 You can find a demo of this extension at https://edtf.wikibase.wiki
 
@@ -118,6 +119,9 @@ You can verify the extension was enabled successfully by opening your wiki's "Sp
 [Professional.Wiki]: https://professional.wiki
 [EDTF]: https://www.loc.gov/standards/datetime/
 [Wikibase]: https://wikibase.consulting/what-is-wikibase/
+[Wikibase hosting]: https://professional.wiki/en/hosting/wikibase
+[Wikibase development]: https://www.wikibase.consulting/about-the-wikibase-team/
+[Wikibase consulting]: https://wikibase.consulting/
 [MediaWiki]: https://www.mediawiki.org
 [PHP]: https://www.php.net
 [Wikibase Repository]: https://www.mediawiki.org/wiki/Extension:Wikibase_Repository
