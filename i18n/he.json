@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"wbedtf-desc": "הוספת תמיכה בתקן EDTF לויקיבייס באמצעות סוג נתונים ייעודי",
+	"datatypes-type-edtf": "תאריך/שעה לפי EDTF",
+	"wikibase-listdatatypes-edtf-head": "תאריך/שעה לפי EDTF",
+	"wikibase-listdatatypes-edtf-body": "<p>תאריך או שעה בתסדיר [https://www.loc.gov/standards/datetime/ Extended Date/Time Format (EDTF)].</p><p>התסדיר זמין מכיוון שההרחבה [https://github.com/ProfessionalWiki/WikibaseEdtf Wikibase EDTF] מופעלת. ר' [https://github.com/ProfessionalWiki/WikibaseEdtf#wikibase-edtf תיעוד] של ההרחבה למידע נוסף על השימוש.</p>"
+}
