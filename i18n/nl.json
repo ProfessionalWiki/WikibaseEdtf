@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Martsniez"
+		]
+	},
+	"wbedtf-desc": "Voegt ondersteuning aan Wikibase toe voor de EDTF standaard via een speciaal data type",
+	"datatypes-type-edtf": "EDTF Datum/Tijd",
+	"wikibase-listdatatypes-edtf-head": "EDTF Datum/Tijd"
+}
