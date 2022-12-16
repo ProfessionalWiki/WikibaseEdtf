@@ -1,6 +1,6 @@
 # Wikibase EDTF
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ProfessionalWiki/WikibaseEdtf/CI/master)](https://github.com/ProfessionalWiki/WikibaseEdtf/actions?query=workflow%3ACI)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ProfessionalWiki/WikibaseEdtf/ci.yml?branch=master)](https://github.com/ProfessionalWiki/WikibaseEdtf/actions?query=workflow%3ACI)
 [![Latest Stable Version](https://poser.pugx.org/professional-wiki/wikibase-edtf/version.png)](https://packagist.org/packages/professional-wiki/wikibase-edtf)
 [![Download count](https://poser.pugx.org/professional-wiki/wikibase-edtf/d/total.png)](https://packagist.org/packages/professional-wiki/wikibase-edtf)
 [![License](https://img.shields.io/packagist/l/professional-wiki/wikibase-edtf)](LICENSE)
