@@ -88,6 +88,11 @@ You can verify the extension was enabled successfully by opening your wiki's "Sp
 
 ## Release notes
 
+### Version 2.1.0 - 2023-01-18
+
+* Translation updates
+* Added support for EDTF 3.x, which brings improved humanizations
+
 ### Version 2.0.1 - 2022-03-26
 
 * Added missing messages for Special:ListDatatypes
