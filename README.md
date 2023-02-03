@@ -125,7 +125,7 @@ You can verify the extension was enabled successfully by opening your wiki's "Sp
 [EDTF]: https://www.loc.gov/standards/datetime/
 [Wikibase]: https://wikibase.consulting/what-is-wikibase/
 [Wikibase hosting]: https://professional.wiki/en/hosting/wikibase
-[Wikibase development]: https://www.wikibase.consulting/about-the-wikibase-team/
+[Wikibase development]: https://professional.wiki/en/wikibase-software-development
 [Wikibase consulting]: https://wikibase.consulting/
 [MediaWiki]: https://www.mediawiki.org
 [PHP]: https://www.php.net
