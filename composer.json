@@ -39,7 +39,7 @@
 		"source": "https://github.com/ProfessionalWiki/WikibaseEdtf/issues"
 	},
 	"require": {
-		"php": ">=7.4",
+		"php": "^7.4|^8",
 		"composer/installers": "^2|^1.0.1",
 		"professional-wiki/edtf": "^3.0.0|^2.0.0"
 	}
