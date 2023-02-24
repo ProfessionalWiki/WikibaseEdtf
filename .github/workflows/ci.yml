@@ -70,9 +70,6 @@ jobs:
       - name: Composer update
         run: composer update
 
-      - name: Initialize Wikibase git submodules
-        run: cd extensions/Wikibase ; git submodule update --init --recursive
-
       - name: Run PHPUnit
         run: php tests/phpunit/phpunit.php -c extensions/WikibaseEdtf/
 
