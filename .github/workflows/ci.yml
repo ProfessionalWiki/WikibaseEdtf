@@ -18,7 +18,9 @@ jobs:
         include:
           - mw: 'REL1_37'
             php: 7.4
-          - mw: 'REL1_37'
+          - mw: 'REL1_38'
+            php: 8.0
+          - mw: 'REL1_39'
             php: 8.0
 
     runs-on: ubuntu-latest
