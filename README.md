@@ -51,8 +51,8 @@ note that if you are using OPTIONAL on the property, then you need to move the F
 Platform requirements:
 
 * [PHP] 7.4 or later, including PHP 8.x
-* [MediaWiki] 1.35.x, 1.36.x or 1.37.x
-* [Wikibase Repository] REL1_35, REL1_36 or REL1_37
+* [MediaWiki] 1.35 up to 1.39
+* [Wikibase Repository] REL1_35, REL1_36, REL1_37, REL1_38, or REL1_39
 
 See the [release notes](#release-notes) for more information on the different versions of this extension.
 
