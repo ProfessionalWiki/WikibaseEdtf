@@ -41,7 +41,8 @@ Because EDTF exposes the values as both xsd:edtf and a dumbed down xsd:dateTime 
 
 ```
 FILTER ( datatype(?date) = xsd:edtf ) #shows only the raw EDTF string from the query results, in this case ?date
-
+```
+```
 FILTER ( datatype(?date) = xsd:dateTime ) #shows only the dumbed down EDTF strings from the query results, in this case ?date
 ```
 note that if you are using OPTIONAL on the property, then you need to move the FILTER within the OPTIONAL statement.
@@ -51,8 +52,8 @@ note that if you are using OPTIONAL on the property, then you need to move the F
 Platform requirements:
 
 * [PHP] 7.4 or later, including PHP 8.x
-* [MediaWiki] 1.35 up to 1.39
-* [Wikibase Repository] REL1_35, REL1_36, REL1_37, REL1_38, or REL1_39
+* [MediaWiki] 1.37 up to 1.39
+* [Wikibase Repository] REL1_37, REL1_38, or REL1_39
 
 See the [release notes](#release-notes) for more information on the different versions of this extension.
 
@@ -63,11 +64,11 @@ The recommended way to install Wikibase EDTF is using [Composer] with
 
 On the commandline, go to your wikis root directory. Then run these two commands:
 
-If you have MediaWiki 1.36 and earlier, use `^1.2.0` instead of `^2.0.0`
-
 ```shell script
 COMPOSER=composer.local.json composer require --no-update professional-wiki/wikibase-edtf:^2.0.0
 ```
+If you have MediaWiki 1.36 and earlier, use `^1.2.0` instead of `^2.0.0`
+
 ```shell script
 composer update professional-wiki/wikibase-edtf --no-dev -o
 ```
