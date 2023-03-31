@@ -63,10 +63,10 @@ The recommended way to install Wikibase EDTF is using [Composer] with
 
 On the commandline, go to your wikis root directory. Then run these two commands:
 
-If you have MediaWiki 1.37, use `^2.0.0` instead of `^1.2.0`
+If you have MediaWiki 1.36 and earlier, use `^1.2.0` instead of `^2.0.0`
 
 ```shell script
-COMPOSER=composer.local.json composer require --no-update professional-wiki/wikibase-edtf:^1.2.0
+COMPOSER=composer.local.json composer require --no-update professional-wiki/wikibase-edtf:^2.0.0
 ```
 ```shell script
 composer update professional-wiki/wikibase-edtf --no-dev -o
@@ -88,10 +88,15 @@ You can verify the extension was enabled successfully by opening your wiki's "Sp
 
 ## Release notes
 
+### Version 2.1.1 - 2023-03-31
+
+* Added support for MediaWiki and Wikibase 1.38 and 1.39
+* Translation updates
+
 ### Version 2.1.0 - 2023-01-18
 
-* Translation updates
 * Added support for EDTF 3.x, which brings improved humanizations
+* Translation updates
 
 ### Version 2.0.1 - 2022-03-26
 
