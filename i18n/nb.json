@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"wbedtf-desc": "Legger til støtte for EDTF-standarden i Wikibase via en dedikert datatype",
+	"datatypes-type-edtf": "EDTF-date/-tid",
+	"wikibase-listdatatypes-edtf-head": "EDTF-dato/-tid",
+	"wikibase-listdatatypes-edtf-body": "<p>En dato eller tid i [https://www.loc.gov/standards/datetime/ Extended Date/Time Format (EDTF)]-formatet.</p><p>Dette formatet er tilgjengelig fordi utvidelsen [https://github.com/ProfessionalWiki/WikibaseEdtf Wikibase EDTF] er aktivert. Se utvidelsens [https://github.com/ProfessionalWiki/WikibaseEdtf#wikibase-edtf dokumentasjon] for mer informasjon om hvordan den brukes.</p>"
+}
