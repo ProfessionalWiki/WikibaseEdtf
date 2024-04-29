@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"沈澄心"
+		]
+	},
+	"wbedtf-desc": "通过专用数据类型向Wikibase添加对EDTF标准的支持",
+	"datatypes-type-edtf": "EDTF日期/时间",
+	"wikibase-listdatatypes-edtf-head": "EDTF日期/时间"
+}
