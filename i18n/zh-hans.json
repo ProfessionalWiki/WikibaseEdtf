@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Lakejason0",
 			"沈澄心"
 		]
 	},
 	"wbedtf-desc": "通过专用数据类型向Wikibase添加对EDTF标准的支持",
 	"datatypes-type-edtf": "EDTF日期/时间",
-	"wikibase-listdatatypes-edtf-head": "EDTF日期/时间"
+	"wikibase-listdatatypes-edtf-head": "EDTF日期/时间",
+	"wikibase-listdatatypes-edtf-body": "<p>采用[https://www.loc.gov/standards/datetime/ 扩展日期/时间格式（EDTF）]的日期或时间。</p><p>此格式可用是因为已启用 [https://github.com/ProfessionalWiki/WikibaseEdtf Wikibase EDTF扩展]。有关如何使用的更多信息，请参阅扩展的 [https://github.com/ProfessionalWiki/WikibaseEdtf#wikibase-edtf 文档]。</p>"
 }
