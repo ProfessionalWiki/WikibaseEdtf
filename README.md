@@ -3,13 +3,13 @@
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ProfessionalWiki/WikibaseEdtf/ci.yml?branch=master)](https://github.com/ProfessionalWiki/WikibaseEdtf/actions?query=workflow%3ACI)
 [![Latest Stable Version](https://poser.pugx.org/professional-wiki/wikibase-edtf/v/stable)](https://packagist.org/packages/professional-wiki/wikibase-edtf)
 [![Download count](https://poser.pugx.org/professional-wiki/wikibase-edtf/downloads)](https://packagist.org/packages/professional-wiki/wikibase-edtf)
-[![License](https://img.shields.io/packagist/l/professional-wiki/wikibase-edtf)](LICENSE)
+[![License](https://poser.pugx.org/professional-wiki/wikibase-edtf/license)](LICENSE)
 
 [MediaWiki] extension that adds support for the [Extended Date/Time Format (EDTF) Specification][EDTF] to [Wikibase] via a new data type.
 
-[Professional.Wiki] created and maintains Wikibase EDTF. We provide [Wikibase hosting], [Wikibase development] and [Wikibase consulting].
+[Professional Wiki] created and maintains Wikibase EDTF. We provide [Wikibase hosting], [Wikibase development], and [Wikibase consulting].
 
-Wikibase EDTF is an open source project that was made possible with the financial support of the Luxembourg Ministry of Culture. Contributions are welcome!
+Wikibase EDTF is an open-source project that was made possible with the financial support of the Luxembourg Ministry of Culture. Contributions are welcome!
 
 You can find a demo of this extension at https://edtf.wikibase.wiki
 
@@ -127,7 +127,7 @@ You can verify the extension was enabled successfully by opening your wiki's "Sp
 	* Display of humanized and internationalized version in the reading UI
 	* RDF export (using standard Wikibase dates) for most values
 
-[Professional.Wiki]: https://professional.wiki
+[Professional Wiki]: https://professional.wiki
 [EDTF]: https://www.loc.gov/standards/datetime/
 [Wikibase]: https://wikibase.consulting/what-is-wikibase/
 [Wikibase hosting]: https://professional.wiki/en/hosting/wikibase
