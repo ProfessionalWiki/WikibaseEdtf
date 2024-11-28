@@ -1,9 +1,11 @@
 #! /bin/bash
 
+set -e
+
 MW_BRANCH=$1
 EXTENSION_NAME=$2
 
-wget https://github.com/wikimedia/mediawiki/archive/$MW_BRANCH.tar.gz -nv
+wget https://github.com/wikimedia/mediawiki/archive/refs/heads/$MW_BRANCH.tar.gz -nv
 
 tar -zxf $MW_BRANCH.tar.gz
 mv mediawiki-$MW_BRANCH mediawiki
@@ -45,7 +47,7 @@ cat <<EOT >> composer.local.json
 EOT
 
 cd extensions
-git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Wikibase --branch=$MW_BRANCH --recurse-submodules -j8
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Wikibase --branch=$MW_BRANCH -j8
 
 cd Wikibase
 git submodule set-url view/lib/wikibase-serialization https://github.com/wmde/WikibaseSerializationJavaScript.git
