@@ -54,4 +54,3 @@ git submodule set-url view/lib/wikibase-serialization https://github.com/wmde/Wi
 git submodule set-url view/lib/wikibase-data-values https://github.com/wmde/DataValuesJavaScript.git
 git submodule set-url view/lib/wikibase-data-model https://github.com/wmde/WikibaseDataModelJavaScript.git
 git submodule sync && git submodule init && git submodule update --recursive
-cd ..
