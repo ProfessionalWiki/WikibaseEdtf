@@ -19,11 +19,11 @@
 		"semantic web",
 		"wikidata"
 	],
-	"homepage": "https://github.com/ProfessionalWiki/WikibaseEdtf",
+	"homepage": "https://edtf.wikibase.wiki",
 	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
-			"name": "Professional.Wiki",
+			"name": "Professional Wiki",
 			"email": "info@professional.wiki",
 			"homepage": "https://Professional.Wiki",
 			"role": "Creator"
