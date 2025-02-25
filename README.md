@@ -36,7 +36,7 @@ For cases where multiple dates are put in the RDF export, like with seasons and 
 
 If you can read PHP, you can see the simplification code in [TimeValueBuilder.php](src/Services/TimeValueBuilder.php).
 
-## apparant duplicate results using SPARQL / Blazegraph
+## Apparent duplicate results using SPARQL / Blazegraph
 Because EDTF exposes the values as both xsd:edtf and a dumbed down xsd:dateTime you will get two values when querying properties with this datatype. using a filter in your SPARQL query can remove the value that you are not interested in:
 
 ```
@@ -53,7 +53,7 @@ Platform requirements:
 
 * [PHP] 7.4 or later, including PHP 8.x
 * [MediaWiki] 1.37 up to 1.43
-* [Wikibase Repository] REL1_37, REL1_38, REL1_39, or REL1_43
+* [Wikibase Repository] compatible with your MediaWiki version
 
 See the [release notes](#release-notes) for more information on the different versions of this extension.
 
