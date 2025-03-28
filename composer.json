@@ -19,7 +19,7 @@
 		"semantic web",
 		"wikidata"
 	],
-	"homepage": "https://edtf.wikibase.wiki",
+	"homepage": "https://professional.wiki/en/extension/wikibase-edtf",
 	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
@@ -36,7 +36,8 @@
 		}
 	],
 	"support": {
-		"source": "https://github.com/ProfessionalWiki/WikibaseEdtf/issues"
+		"issues": "https://github.com/ProfessionalWiki/WikibaseEdtf/issues",
+		"source": "https://github.com/ProfessionalWiki/WikibaseEdtf"
 	},
 	"require": {
 		"php": ">=7.4",

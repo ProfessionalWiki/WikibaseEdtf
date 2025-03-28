@@ -7,5 +7,5 @@
 	"wbedtf-desc": "Ajoute à Wikibase la prise en charge du standard EDTF via un type de données dédié",
 	"datatypes-type-edtf": "Horodatage EDTF",
 	"wikibase-listdatatypes-edtf-head": "Horodatage EDTF",
-	"wikibase-listdatatypes-edtf-body": "<p>Une indication de date ou d’heure au format [https://www.loc.gov/standards/datetime/ Extended Date/Time Format (EDTF)].</p><p>Ce format est disponible parce que l’[https://github.com/ProfessionalWiki/WikibaseEdtf extension Wikibase EDTF] est activée. Voir la [https://github.com/ProfessionalWiki/WikibaseEdtf#wikibase-edtf documentation] de l’extension pour plus d’informations concernant son utilisation.</p>"
+	"wikibase-listdatatypes-edtf-body": "<p>Une indication de date ou d’heure au format [https://www.loc.gov/standards/datetime/ Extended Date/Time Format (EDTF)].</p><p>Ce format est disponible parce que l’[https://github.com/ProfessionalWiki/WikibaseEdtf extension Wikibase EDTF] est activée. Voir la [https://professional.wiki/en/extension/wikibase-edtf documentation] de l’extension pour plus d’informations concernant son utilisation.</p>"
 }

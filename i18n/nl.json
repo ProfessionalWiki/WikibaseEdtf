@@ -8,5 +8,5 @@
 	"wbedtf-desc": "Voegt ondersteuning aan Wikibase toe voor de EDTF standaard via een speciaal data type",
 	"datatypes-type-edtf": "EDTF Datum/Tijd",
 	"wikibase-listdatatypes-edtf-head": "EDTF Datum/Tijd",
-	"wikibase-listdatatypes-edtf-body": "<p>Een datum of tijd in het formaat [https://www.loc.gov/standards/datetime/ Extended Date/Time Format (EDTF)].</p><p>Dit formaat is beschikbaar omdat de [https://github.com/ProfessionalWiki/WikibaseEdtf uitbreiding Wikibase EDTF] is ingeschakeld. Zie de [https://github.com/ProfessionalWiki/WikibaseEdtf#wikibase-edtf documentatie] van de uitbreiding voor meer informatie over het gebruik.</p>"
+	"wikibase-listdatatypes-edtf-body": "<p>Een datum of tijd in het formaat [https://www.loc.gov/standards/datetime/ Extended Date/Time Format (EDTF)].</p><p>Dit formaat is beschikbaar omdat de [https://github.com/ProfessionalWiki/WikibaseEdtf uitbreiding Wikibase EDTF] is ingeschakeld. Zie de [https://professional.wiki/en/extension/wikibase-edtf documentatie] van de uitbreiding voor meer informatie over het gebruik.</p>"
 }

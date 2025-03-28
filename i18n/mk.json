@@ -7,5 +7,5 @@
 	"wbedtf-desc": "Додава поддршка за стандардот EDTF во Викибазата преку наменски податочен тип",
 	"datatypes-type-edtf": "Датум/Време по EDTF",
 	"wikibase-listdatatypes-edtf-head": "Датум/Време по EDTF",
-	"wikibase-listdatatypes-edtf-body": "<p>Датум или време во [https://www.loc.gov/standards/datetime/ Проширениот формат за датум/време (EDTF)].</p><p>Овој формат е достапен бидејќи е овозможен [https://github.com/ProfessionalWiki/WikibaseEdtf додатокот EDTF на Викибазата]. Повеќе информации за употребата ќе најдете во [https://github.com/ProfessionalWiki/WikibaseEdtf#wikibase-edtf документацијата на додатокот].</p>"
+	"wikibase-listdatatypes-edtf-body": "<p>Датум или време во [https://www.loc.gov/standards/datetime/ Проширениот формат за датум/време (EDTF)].</p><p>Овој формат е достапен бидејќи е овозможен [https://github.com/ProfessionalWiki/WikibaseEdtf додатокот EDTF на Викибазата]. Повеќе информации за употребата ќе најдете во [https://professional.wiki/en/extension/wikibase-edtf документацијата на додатокот].</p>"
 }

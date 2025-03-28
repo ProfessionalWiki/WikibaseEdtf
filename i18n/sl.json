@@ -7,5 +7,5 @@
 	"wbedtf-desc": "V Wikibase doda z namensko podatkovno vrsto podporo za standard EDTF",
 	"datatypes-type-edtf": "Datum/čas EDTF",
 	"wikibase-listdatatypes-edtf-head": "Datum/čas EDTF",
-	"wikibase-listdatatypes-edtf-body": "<p>Datum ali čas v formatu [https://www.loc.gov/standards/datetime/ Extended Date/Time Format (EDTF)].</p><p> Ta format je na voljo, ker je omogočena razširitev [https://github.com/ProfessionalWiki/WikibaseEdtf Wikibase EDTF]. Za več informacij o uporabi glejte [https://github.com/ProfessionalWiki/WikibaseEdtf#wikibase-edtf dokumentacijo] razširitve.</p>"
+	"wikibase-listdatatypes-edtf-body": "<p>Datum ali čas v formatu [https://www.loc.gov/standards/datetime/ Extended Date/Time Format (EDTF)].</p><p> Ta format je na voljo, ker je omogočena razširitev [https://github.com/ProfessionalWiki/WikibaseEdtf Wikibase EDTF]. Za več informacij o uporabi glejte [https://professional.wiki/en/extension/wikibase-edtf dokumentacijo] razširitve.</p>"
 }
