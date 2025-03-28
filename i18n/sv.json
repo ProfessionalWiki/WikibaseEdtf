@@ -7,5 +7,5 @@
 	"wbedtf-desc": "Lägger till stöd för standarden EDTF i Wikibase med en egen datatyp",
 	"datatypes-type-edtf": "EDTF-datum/tid",
 	"wikibase-listdatatypes-edtf-head": "EDTF-datum/tid",
-	"wikibase-listdatatypes-edtf-body": "<p>Ett datum eller tid i det [https://www.loc.gov/standards/datetime/ Extended Date/Time Format (EDTF)].</p><p>Detta format finns tillgängligt på grund att [https://github.com/ProfessionalWiki/WikibaseEdtf tillägget Wikibase EDTF] har aktiverats. Läs tilläggets [https://github.com/ProfessionalWiki/WikibaseEdtf#wikibase-edtf dokumentation] för mer information om användning.</p>"
+	"wikibase-listdatatypes-edtf-body": "<p>Ett datum eller tid i det [https://www.loc.gov/standards/datetime/ Extended Date/Time Format (EDTF)].</p><p>Detta format finns tillgängligt på grund att [https://github.com/ProfessionalWiki/WikibaseEdtf tillägget Wikibase EDTF] har aktiverats. Läs tilläggets [https://professional.wiki/en/extension/wikibase-edtf dokumentation] för mer information om användning.</p>"
 }

@@ -7,5 +7,5 @@
 	"wbedtf-desc": "通過專用資料類型，對 Wikibase 添加對 EDTF 標準的支援",
 	"datatypes-type-edtf": "EDTF 日期/時間",
 	"wikibase-listdatatypes-edtf-head": "EDTF 日期/時間",
-	"wikibase-listdatatypes-edtf-body": "<p>採用[https://www.loc.gov/standards/datetime/ 擴充日期/時間格式（Extended Date/Time Format、EDTF）]格式的日期或時間。</p><p>因已啟用 [https://github.com/ProfessionalWiki/WikibaseEdtf Wikibase EDTF 擴充功能]，可使用此格式。有關使用方面的更多資訊，請參閱擴充功能的[https://github.com/ProfessionalWiki/WikibaseEdtf#wikibase-edtf 文件]。</p>"
+	"wikibase-listdatatypes-edtf-body": "<p>採用[https://www.loc.gov/standards/datetime/ 擴充日期/時間格式（Extended Date/Time Format、EDTF）]格式的日期或時間。</p><p>因已啟用 [https://github.com/ProfessionalWiki/WikibaseEdtf Wikibase EDTF 擴充功能]，可使用此格式。有關使用方面的更多資訊，請參閱擴充功能的[https://professional.wiki/en/extension/wikibase-edtf 文件]。</p>"
 }

@@ -9,5 +9,5 @@
 
 	"datatypes-type-edtf": "EDTF Date/Time",
 	"wikibase-listdatatypes-edtf-head": "EDTF Date/Time",
-	"wikibase-listdatatypes-edtf-body": "<p>A date or time in the [https://www.loc.gov/standards/datetime/ Extended Date/Time Format (EDTF)] format.</p><p>This format is available because the [https://github.com/ProfessionalWiki/WikibaseEdtf Wikibase EDTF extension] is enabled. See the extension's [https://github.com/ProfessionalWiki/WikibaseEdtf#wikibase-edtf documentation] for more information about usage.</p>"
+	"wikibase-listdatatypes-edtf-body": "<p>A date or time in the [https://www.loc.gov/standards/datetime/ Extended Date/Time Format (EDTF)] format.</p><p>This format is available because the [https://github.com/ProfessionalWiki/WikibaseEdtf Wikibase EDTF extension] is enabled. See the extension's [https://professional.wiki/en/extension/wikibase-edtf documentation] for more information about usage.</p>"
 }

@@ -7,5 +7,5 @@
 	"wbedtf-desc": "Ermöglicht Wikibase die Nutzung des EDTF-Standards mithilfe eines eigenen Datentyps",
 	"datatypes-type-edtf": "EDTF Datum/Zeitpunkt",
 	"wikibase-listdatatypes-edtf-head": "EDTF Datum/Zeitpunkt",
-	"wikibase-listdatatypes-edtf-body": "<p>Ein Datum oder Zeitpunkt im [https://www.loc.gov/standards/datetime/ „Extended-Date/Time-Format“ (EDTF)].</p><p>Diese Format ist verfügbar, da die [https://github.com/ProfessionalWiki/WikibaseEdtf „Softwareerweitung Wikibase EDTF“] aktiviert wurde. Siehe die [https://github.com/ProfessionalWiki/WikibaseEdtf#wikibase-edtf Dokumentation der Softwareerweiterung] für Hinweise zu deren Nutzung.</p>"
+	"wikibase-listdatatypes-edtf-body": "<p>Ein Datum oder Zeitpunkt im [https://www.loc.gov/standards/datetime/ „Extended-Date/Time-Format“ (EDTF)].</p><p>Diese Format ist verfügbar, da die [https://github.com/ProfessionalWiki/WikibaseEdtf „Softwareerweitung Wikibase EDTF“] aktiviert wurde. Siehe die [https://professional.wiki/en/extension/wikibase-edtf Dokumentation der Softwareerweiterung] für Hinweise zu deren Nutzung.</p>"
 }
