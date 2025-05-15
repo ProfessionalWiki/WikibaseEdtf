@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kghbln"
+			"Kghbln",
+			"Talex42"
 		]
 	},
 	"wbedtf-desc": "Ermöglicht Wikibase die Nutzung des EDTF-Standards mithilfe eines eigenen Datentyps",
