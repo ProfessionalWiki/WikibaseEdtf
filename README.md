@@ -49,7 +49,7 @@ note that if you are using OPTIONAL on the property, then you need to move the F
 
 ## Installation
 
-Platform requirements:
+Platform requirements for the latest version:
 
 * [PHP] 7.4 or later, including PHP 8.x
 * [MediaWiki] 1.37 up to 1.43
@@ -88,6 +88,11 @@ You can verify the extension was enabled successfully by opening your wiki's "Sp
 * PHP tests: `php tests/phpunit/phpunit.php -c extensions/WikibaseEdtf/`
 
 ## Release notes
+
+### Version 2.1.2 - 2025-07-08
+
+* Added support for MediaWiki and Wikibase 1.40, 1.41, 1.42, and 1.43
+* Translation updates
 
 ### Version 2.1.1 - 2023-03-31
 
