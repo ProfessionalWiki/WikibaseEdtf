@@ -23,9 +23,9 @@ jobs:
           - mw: 'REL1_42'
             php: 8.2
           - mw: 'REL1_43'
-            php: 8.2
-          - mw: 'REL1_44'
             php: 8.3
+          - mw: 'REL1_44'
+            php: 8.4
 
     runs-on: ubuntu-latest
 
