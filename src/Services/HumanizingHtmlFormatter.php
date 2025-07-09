@@ -10,7 +10,7 @@ use EDTF\HumanizationResult;
 use EDTF\StructuredHumanizer;
 use InvalidArgumentException;
 use ValueFormatters\ValueFormatter;
-use Html;
+use MediaWiki\Html\Html;
 
 class HumanizingHtmlFormatter implements ValueFormatter {
 
