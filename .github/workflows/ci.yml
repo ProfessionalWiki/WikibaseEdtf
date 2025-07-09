@@ -16,12 +16,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - mw: 'REL1_37'
-            php: 7.4
-          - mw: 'REL1_38'
-            php: 8.0
-          - mw: 'REL1_39'
-            php: 8.0
           - mw: 'REL1_40'
             php: 8.1
           - mw: 'REL1_41'
@@ -30,6 +24,8 @@ jobs:
             php: 8.2
           - mw: 'REL1_43'
             php: 8.2
+          - mw: 'REL1_44'
+            php: 8.3
 
     runs-on: ubuntu-latest
 
