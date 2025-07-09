@@ -51,18 +51,16 @@ note that if you are using OPTIONAL on the property, then you need to move the F
 
 Platform requirements for the latest version:
 
-* [PHP] 7.4 or later, including PHP 8.x
-* [MediaWiki] 1.37 up to 1.43
+* [PHP] 7.4 or later, including PHP 8.x, tested up to PHP 8.4
+* [MediaWiki] 1.40 up to 1.40
 * [Wikibase Repository] compatible with your MediaWiki version
 
 See the [release notes](#release-notes) for more information on the different versions of this extension.
 
-First install MediaWiki and Wikibase Repository.
-
 The recommended way to install Wikibase EDTF is using [Composer] with
 [MediaWiki's built-in support for Composer][Composer install].
 
-On the commandline, go to your wikis root directory. Then run these two commands:
+On the commandline, go to your wiki's root directory. Then run these two commands:
 
 ```shell script
 COMPOSER=composer.local.json composer require --no-update professional-wiki/wikibase-edtf:^2.0.0
@@ -75,7 +73,7 @@ composer update professional-wiki/wikibase-edtf --no-dev -o
 
 **Enabling the extension**
 
-Then enable the extension by adding the following to the bottom of your wikis "LocalSettings.php" file:
+Then enable the extension by adding the following to the bottom of your wiki's "LocalSettings.php" file:
 
 ```php
 wfLoadExtension( 'WikibaseEdtf' );
@@ -88,6 +86,11 @@ You can verify the extension was enabled successfully by opening your wiki's "Sp
 * PHP tests: `php tests/phpunit/phpunit.php -c extensions/WikibaseEdtf/`
 
 ## Release notes
+
+### Version 3.0.0 - TDB
+
+* Raised minimum MediaWiki and Wikibase versions from 1.37 to 1.40
+* Added support for MediaWiki and Wikibase 1.44
 
 ### Version 2.1.2 - 2025-07-08
 
