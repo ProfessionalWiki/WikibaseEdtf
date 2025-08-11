@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"JeffreyKim"
+		]
+	},
+	"wbedtf-desc": "透過返專用嘅數據類型將對EDTF標準嘅支援嚟加入維基庫",
+	"datatypes-type-edtf": "EDTF日期/時間",
+	"wikibase-listdatatypes-edtf-head": "EDTF日期/時間",
+	"wikibase-listdatatypes-edtf-body": "<p>以[https://www.loc.gov/standards/datetime/ Extended Date/Time Format (EDTF)]格式嘅日期或者時間。<p></p>呢個格式係因為啟用咗[https://github.com/ProfessionalWiki/WikibaseEdtf 維基庫EDTF擴充]。有關使用嘅詳情，請睇呢個擴充程式嘅[https://professional.wiki/en/extension/wikibase-edtf 文件]。</p>"
+}
