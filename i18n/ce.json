@@ -5,5 +5,7 @@
 		]
 	},
 	"wbedtf-desc": "Wikibase чу тӀетуху EDTF стандартан гӀоьналла леррина хаамийн тайпанехула",
+	"datatypes-type-edtf": "EDTF терахь/хан",
+	"wikibase-listdatatypes-edtf-head": "EDTF терахь/хан",
 	"wikibase-listdatatypes-edtf-body": "<p>Терахь а, хан а [https://www.loc.gov/standards/datetime/ Extended Date/Time Format (EDTF)] форматехь.</p><p>ХӀара формат лело йиш йу йукъайалийначу шордар бахьана долуш. [https://github.com/ProfessionalWiki/WikibaseEdtf Wikibase EDTF]. Лелорах лаьцна кхин а хаамаш хьажа шордаран [https://professional.wiki/en/extension/wikibase-edtf документацин] чохь.</p>"
 }
