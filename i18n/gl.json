@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"wbedtf-desc": "Engade compatibilidade para o estándar EDTF a Wikibase mediante un tipo de datos dedicado",
+	"datatypes-type-edtf": "Data/Hora EDTF",
+	"wikibase-listdatatypes-edtf-head": "Data/Hora EDTF",
+	"wikibase-listdatatypes-edtf-body": "<p>Unha data ou hora no [https://www.loc.gov/standards/datetime formato de data/hora ampliado (EDTF)].</p><p>Este formato está dispoñible porque a [https://github.com/ProfessionalWiki/WikibaseEdtf extensión EDTF de Wikibase] está activada. Consulta a [https://professional.wiki/en/extension/wikibase-edtf documentación] da extensión para obter máis información sobre o seu uso.</p>"
+}
