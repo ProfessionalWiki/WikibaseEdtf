@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sabelöga"
+			"Sabelöga",
+			"Stefan2255"
 		]
 	},
 	"wbedtf-desc": "Lägger till stöd för standarden EDTF i Wikibase med en egen datatyp",
