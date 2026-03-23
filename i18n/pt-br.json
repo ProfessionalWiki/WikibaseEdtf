@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardoaddad"
+		]
+	},
+	"wbedtf-desc": "Adiciona ao Wikibase suporte do padrão EDTF por meio de um tipo de dados especializado",
+	"datatypes-type-edtf": "Data/Hora EDTF",
+	"wikibase-listdatatypes-edtf-head": "Data/Hora EDTF"
+}
