@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"wbedtf-desc": "Pridáva do Wikibase podporu štandardu EDTF prostredníctvom vyhradeného dátového typu",
+	"datatypes-type-edtf": "Dátum/čas EDTF",
+	"wikibase-listdatatypes-edtf-head": "Dátum/čas EDTF",
+	"wikibase-listdatatypes-edtf-body": "<p>Dátum alebo čas vo formáte [https://www.loc.gov/standards/datetime/ Extended Date/Time Format (EDTF)].</p><p>Tento formát je dostupný, pretože je zapnuté [https://github.com/ProfessionalWiki/WikibaseEdtf rozšírenie Wikibase EDTF]. Viac o jeho používaní nájdete v [https://professional.wiki/en/extension/wikibase-edtf dokumentácii] rozšírenia.</p>"
+}
